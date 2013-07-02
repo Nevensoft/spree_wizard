@@ -22,6 +22,29 @@ bundle
 bundle exec rails g spree_product_selection_wizard:install
 ```
 
+
+
+Development
+-----------
+
+To setup a spree site for working on the spree extension, you'll want to create 
+a 'dummy' app.
+
+```shell
+# within spree_product_selection_wizard
+rake test_app
+```
+
+This creates a Spree rails app with the Spree extension already setup in the
+```spec/dummy``` app. To apply new migrations to the ```spre/dummy``` app,
+
+```shell
+rake app:db:migrate
+```
+
+
+
+
 Testing
 -------
 
@@ -40,4 +63,7 @@ Simply add this require statement to your spec_helper:
 require 'spree_product_selection_wizard/factories'
 ```
 
+
+Credits
+-------
 Copyright (c) 2013 Weston Platter, released under the MIT License.
