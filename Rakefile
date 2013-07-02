@@ -13,3 +13,6 @@ task :test_app do
   ENV['LIB_NAME'] = 'spree_product_selection_wizard'
   Rake::Task['extension:test_app'].invoke
 end
+
+APP_RAKEFILE = File.expand_path('../spec/dummy/Rakefile', __FILE__)
+load 'rails/tasks/engine.rake'
