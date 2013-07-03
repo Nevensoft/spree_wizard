@@ -11,5 +11,4 @@ Spree.config do |config|
   # config.site_name = "Spree Demo Site"
 end
 
-# this should not be defined in a spree extension.
-# Spree.user_class = "Spree::LegacyUser"
+Spree.user_class = "Spree::LegacyUser"

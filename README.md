@@ -2,7 +2,7 @@ SpreeProductSelectionWizard
 ===========================
 
 Product Selection Wizard enables Spree Admins to define 
-+ wizard-able product types
++ wizard-able taxons
 + wizard selection order
 + discounts on prodcut groups
 

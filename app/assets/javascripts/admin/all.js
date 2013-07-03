@@ -7,6 +7,6 @@
 //= require jquery
 //= require jquery_ujs
 
-//= require admin/spree_product_selection_wizard
+//= require admin/spree_product_selection_wizard/
 
 //= require_tree .
