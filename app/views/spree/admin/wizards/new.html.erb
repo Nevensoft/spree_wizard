@@ -1,5 +1,19 @@
-<h1>New wizard</h1>
+<%= render :partial => 'spree/admin/shared/product_sub_menu' %>
 
-<%= render 'form' %>
+<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @wizard } %>
 
-<%= link_to 'Back', wizards_path %>
+<%= form_for [:admin, @wizard], :html => { :multipart => true } do |f| %>
+  <fieldset data-hook="new_wizard">
+
+    <legend align="center"><%= Spree.t(:new_wizard) %></legend>
+
+    <%= f.field_container :name do %>
+      <%= f.label :name, Spree.t(:name) %> <span class="required">*</span><br />
+      <%= f.text_field :name, :class => 'fullwidth title' %>
+      <%= f.error_message_on :name %>
+    <% end %>
+
+    <%= render :partial => 'spree/admin/shared/new_resource_links' %>
+
+  </fieldset>
+<% end %>

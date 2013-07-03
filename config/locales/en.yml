@@ -5,6 +5,10 @@
 #   hello: "Hello world"
 
 spree:
+  wizards: Wizards
+  new_wizard: New Wizard
+  back_to_wizards_list: Back To Wizards
+  
   admin: 
     tab:
       example: 'example'

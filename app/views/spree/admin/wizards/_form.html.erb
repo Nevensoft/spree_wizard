@@ -1,21 +1,26 @@
-<%= form_for([:admin, @wizard]) do |f| %>
-  <% if @wizard.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@wizard.errors.count, "error") %> prohibited this wizard from being saved:</h2>
-
-      <ul>
-      <% @wizard.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<div data-hook="admin_wizard_form_fields">
 
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+    
+  <div class="twelve columns alpha omega">
+    <div class="field">
+      <%= f.field_container :taxons do %>
+        <%= f.label :taxon_ids, Spree.t(:taxons) %><br />
+        <%= f.hidden_field :taxon_ids, :value => @wizard.taxon_ids.join(',') %>
+      <% end %>
+    </div>
   </div>
+  
+  <div class="clear"></div>
+  <div data-hook="admin_product_form_additional_fields"></div>
+  <div class="clear"></div>
+</div>
+
+<% unless Rails.env.test? %>
+  <script>
+    $('.select2-container').css({width: '20em'})
+  </script>
 <% end %>
