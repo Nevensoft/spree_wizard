@@ -1,12 +1,5 @@
-module Spree
-  class Spree::WizardsController < Spree::BaseController
-
-    # helper methods that are located in the spree layout view code
-    # 
-    helper Spree::StoreHelper
-    helper Spree::BaseHelper
-    include Spree::Core::ControllerHelpers::Order
-
+ module Spree
+  class Spree::WizardsController < Spree::StoreController
 
     # GET /wizards
     # GET /wizards.json
