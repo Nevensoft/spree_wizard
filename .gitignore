@@ -12,3 +12,6 @@ nbproject
 pkg
 *.swp
 spec/dummy
+
+# custom added
+spree.yml
