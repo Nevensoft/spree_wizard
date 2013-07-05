@@ -13,6 +13,12 @@
       <%= f.error_message_on :name %>
     <% end %>
 
+    <%= f.field_container :permalink do %>
+      <%= f.label :permalink, Spree.t(:permalink) %> <span class="required">*</span><br />
+      <%= f.text_field :permalink, :class => 'fullwidth title' %>
+      <%= f.error_message_on :permalink %>
+    <% end %>
+
     <%= render :partial => 'spree/admin/shared/new_resource_links' %>
 
   </fieldset>

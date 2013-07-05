@@ -4,7 +4,13 @@
 
 <% content_for :page_actions do %>
   <li id="new_wizard_link">
-    <%= button_link_to Spree.t(:new_wizard), new_admin_wizard_url, { :remote => true, :icon => 'icon-plus', 'data-update' => 'new_wizard', :id => 'new_wizard_link' } %>
+    <%= button_link_to Spree.t(:new_wizard), 
+      new_admin_wizard_url, 
+      { :remote => true, 
+        :icon => 'icon-plus', 
+        'data-update' => 'new_wizard', 
+        :id => 'new_wizard_link' }
+    %>
   </li>
 <% end %>
 
@@ -17,20 +23,25 @@
 
 <table class="index" id='listing_wizards' data-hook>
   <colgroup>
-    <col style="width: 45%">
-    <col style="width: 45%">
+    <col style="width: 28%">
+    <col style="width: 28%">
+    <col style="width: 10%; text-align: center">
     <col style="width: 10%">
   </colgroup>
   <thead>
     <tr data-hook="listing_wizards_header">
+      <th><%= Spree.t(:permalink) %></th>
       <th><%= Spree.t(:name) %></th>
+      <th><%= Spree.t(:taxons) %></th>
       <th class="actions"></th>
     </tr>
   </thead>
   <tbody>
     <% @wizards.each do |wizard| %>
-      <tr id="<%= spree_dom_id wizard %>" data-hook="listing_wizards_row" class="<%= cycle('odd', 'even')%>">
-        <td><%= wizard.name %></td>
+      <tr id="<%= spree_dom_id wizard %>" data-hook="listing_wizards_row" class="<%= cycle('odd', 'even') %>">
+        <td><%= wizard.try(:permalink) %></td>
+        <td><%= link_to wizard.name, edit_admin_wizard_path(wizard) %></td>
+        <td><%= wizard.taxons.size %></td>
         <td class="actions">
           <%= link_to_edit(wizard, :no_text => true) %>
           <%= link_to_delete(wizard, :no_text => true) %>
