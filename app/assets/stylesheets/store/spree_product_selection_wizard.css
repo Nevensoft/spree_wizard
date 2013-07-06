@@ -1,5 +1,11 @@
 /*
  *= require store/spree_frontend
+ *= require ./wizards
+*/
+
+/*#example {
+  font-weight: bold;
+}
 */
 
 .left {
