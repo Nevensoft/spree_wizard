@@ -9,4 +9,11 @@
 
 //= require store/spree_product_selection_wizard
 
+
+// NOTE: underscore MUST be required before backbone since underscore
+//       is a backbone dependency.
+// 
+//= require lib/underscore
+//= require lib/backbone
+
 //= require_tree .
