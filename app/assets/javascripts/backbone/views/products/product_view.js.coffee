@@ -1,6 +1,6 @@
-Wizard.Views.Products ||= {}
+SpreeWizard.Views.Products ||= {}
 
-class Wizard.Views.Products.ProductView extends Backbone.View
+class SpreeWizard.Views.Products.ProductView extends Backbone.View
   template: JST["backbone/templates/products/product"]
 
   events:

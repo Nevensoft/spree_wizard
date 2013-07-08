@@ -3,7 +3,7 @@
 #= require_tree ./models
 #= require_tree ./views
 
-window.Wizard =
+window.SpreeWizard =
   Models: {}
   Collections: {}
   Views: {}

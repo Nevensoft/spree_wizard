@@ -1,6 +1,6 @@
-Wizard.Views.Products ||= {}
+SpreeWizard.Views.Products ||= {}
 
-class Wizard.Views.Products.IndexView extends Backbone.View
+class SpreeWizard.Views.Products.IndexView extends Backbone.View
   template: JST["backbone/templates/products/index"]
 
   el: $('#product-container')
@@ -13,7 +13,7 @@ class Wizard.Views.Products.IndexView extends Backbone.View
     @options.products.each(@addOne)
 
   addOne: (product) =>
-    view = new Wizard.Views.Products.ProductView({model : product})
+    view = new SpreeWizard.Views.Products.ProductView({model : product})
     @$("tbody").append(view.render().el)
 
   render: =>
