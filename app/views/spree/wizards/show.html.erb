@@ -1,41 +1,30 @@
 <script type="text/javascript">
 	
 	$(document).ready(function(){
-		model = new SpreeWizard.Models.Wizard(1);
 		
+		var wizard_id = 1;
 
-		SpreeWizard.Models.Product = Backbone.Model.extend();
+		var model = new SpreeWizard.Models.Product({id: wizard_id});
 
-		SpreeWizard.Collections.Products = Backbone.Collection.extend({
-  			model: Wizard.Models.Product
-		});
+		var products_array = new Array(model);
 
-		var products;
-
-		$.ajax({
-		  url: '../wizards#show',
-		  dataType: 'json',
-		  success: function (data) {
-		    products = new SpreeWizard.Collections.Products(data[0]);
-		  }
-		});
-
-
-		new SpreeWizard.Views.Products.ShowView();
+		var products = new SpreeWizard.Collections.ProductsCollection(products_array);
 		
-	});
+		var view = new SpreeWizard.Views.Products.IndexView({products: products})
+
+	// 	$.ajax({
+	// 	  url: '/wizards/1',
+	// 	  dataType: 'json',
+	// 	  success: function (data) {
+	// 	    products = new SpreeWizard.Collections.Products(data[0]);
+	// 	  }
+	// 	});
+
+
+	// 	new SpreeWizard.Views.Products.ShowView();
+		
+	// });
 	
-
-
-	// render the view
-	//
-	// OR 
-	//
-	// do the collection thing
-
-	// collection = new Collection([model])
-	// model.fetch()
-
 </script>
 
 <div id="example">
