@@ -1,7 +1,8 @@
-class SpreeWizard.Models.SpreeWizard extends Backbone.Model
-  paramRoot: 'product'
+class SpreeWizard.Models.Product extends Backbone.Model
+  paramRoot: 'spree_product'
 
 
 class SpreeWizard.Collections.ProductsCollection extends Backbone.Collection
   model: SpreeWizard.Models.Product
-  url: '/SpreeWizards'
+  url: '/api/products'
+
