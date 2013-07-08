@@ -15,6 +15,7 @@
     # GET /wizards/1
     # GET /wizards/1.json
     def show
+      @product = Spree::Product.all
       @wizard = Spree::Wizard.find(params[:id])
 
       respond_to do |format|

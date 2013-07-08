@@ -8,8 +8,7 @@
 
 $(function(){
 
-  $(document).ready( function(){
-    alert('this is an example in regualr javascript');
-  });
+
+  
 
 });

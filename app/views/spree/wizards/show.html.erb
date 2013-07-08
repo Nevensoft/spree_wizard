@@ -1,7 +1,32 @@
 <script type="text/javascript">
 	
-	// model = new Model(id: 1)
-	// view = new View(model: model) 
+	$(document).ready(function(){
+		model = new Wizard.Models.Product(1);
+		
+
+
+		Wizard.Models.Product = Backbone.Model.extend();
+
+		Wizard.Collections.Products = Backbone.Collection.extend({
+  			model: Wizard.Models.Product
+		});
+
+		var products;
+
+		$.ajax({
+		  url: '../wizards#show',
+		  dataType: 'json',
+		  success: function (data) {
+		    products = new Wizard.Collections.Products(data[0]);
+		  }
+		});
+
+
+		new Wizard.Views.Products.ShowView();
+		
+	});
+	
+
 
 	// render the view
 	//
@@ -57,11 +82,8 @@
 	</div>
 	<br class="clear" />
 	<!-- this will change to @wizard.products or something similar -->
-	<% @wizard.taxons.each do |product| %>
-	<div class="product" id="product-<%= product.id %>">
-				
+	<div id="product-container">
 	</div>
-	<% end%>
 </div>
 
 <div id="product-frame">

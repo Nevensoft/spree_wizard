@@ -13,7 +13,8 @@
 // NOTE: underscore MUST be required before backbone since underscore
 //       is a backbone dependency.
 // 
-//= require lib/underscore
-//= require lib/backbone
+//= require libs/underscore
+//= require libs/backbone
+//= require backbone/wizard
 
 //= require_tree .

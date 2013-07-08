@@ -3,11 +3,11 @@ Wizard.Views.Products ||= {}
 class Wizard.Views.Products.IndexView extends Backbone.View
   template: JST["backbone/templates/products/index"]
 
-  el: $('#product-container'),
+  el: $('#product-container')
 
-  initialize: () ->
-    console.log('Hello there')
-    @options.products.bind('reset', @addAll)
+  initialize: () =>
+    console.log('hello')
+    
 
   addAll: () =>
     @options.products.each(@addOne)

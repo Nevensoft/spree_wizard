@@ -2,3 +2,109 @@
 #example {
   font-weight: bold;
 }
+
+.left {
+	float:left;
+}
+
+.right {
+	float:right;
+}
+
+#wizard-frame, #product-selection {
+	height:300px;
+	width:100%;
+	margin-bottom:20px;
+}
+#product-frame {
+	min-height:500px;
+	width:100%;
+	margin-bottom:20px;
+}
+#left-product-nav {
+	float:left;
+	width:45px;
+	height:100%;
+	font-size:32px;
+}
+
+#right-product-nav {
+	position:absolute;
+	right:0;
+	top:0;
+	width:45px;
+	height:100%;
+	background-color:white;
+	font-size:32px;
+	text-align:right;
+}
+.taxon {
+	border:1px solid black;
+	height:200px;
+}
+
+.wizard-box {
+	float:left;
+	text-align:center;
+	width:200px;
+	height:200px;
+	margin-right:10px;
+}
+
+.product {
+	display:inline-block;
+	text-align:center;
+	width:200px;
+	height:200px;
+	margin-right:10px;
+	border:1px solid black;
+	height:200px;
+}
+
+#selection-header h2, h5, select {
+	display:inline;
+}
+
+#selection-header h5 {
+	margin-left:100px;
+}
+
+#product-container {
+	position:relative;
+	overflow: hidden;
+	white-space: nowrap;
+	height:202px;
+}
+.product-photo, .product-name, .upgrade-price, .product-option, .add-item, .product-description {
+	border:1px solid black;
+	width:100%;
+	margin-bottom:5px;
+}
+
+.product-photo {
+	height:250px;
+	width:250px;
+	margin:10px;
+}
+.product-photo img {
+	height:100%;
+	width:100%;
+}
+.product-info {
+	width:600px;
+}
+
+.product-name {
+	padding:5px 0 5px 0;
+}
+.product-name p {
+	font-weight:bold;
+	font-size:30px;
+	line-height:30px;
+	margin:0;
+	padding:0;
+}
+
+.upgrade-price{
+
+}

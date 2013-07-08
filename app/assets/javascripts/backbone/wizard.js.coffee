@@ -6,5 +6,4 @@
 window.Wizard =
   Models: {}
   Collections: {}
-  Routers: {}
   Views: {}
