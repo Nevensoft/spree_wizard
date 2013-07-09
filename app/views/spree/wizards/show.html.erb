@@ -23,54 +23,127 @@
 
 	// 	new SpreeWizard.Views.Products.ShowView();
 		
-	// });
+	});
 	
 </script>
-
-<div id="example">
-	<p>this is an example of the css affecting the page</p>
-</div>
-
-
-<p>
-  <b>Name:</b>
-  <%= @wizard.name %>
-</p>
 
 
 
 <div id="wizard-frame">
-	<h2>Your Custom Complete with Premium Upgrades:</h2>
-	
-	<% @wizard.taxons.each_with_index do |taxon, index| %>
-	<div class="wizard-box">
-		<div class="header">
-			<h5><%= index + 1 %> <%= taxon.name %></h5>
+	<div id="wizard-header">
+		<div class="header-text">
+			<h2>Your Custom Complete with Premium Upgrades:</h2>
 		</div>
-		<div class="taxon" id="taxon-<%= taxon.id %>">
-				
+		<div class="subtotal">
+			<h3>Subtotal: $132.95</h3>
+		</div>
+		<div class="add-cart">
+			<button value="Add To Cart">Add To Cart</button>
 		</div>
 	</div>
-	<% end %>
+	<!--Wizard Taxons will loop in here -->
+	<div class="wizard-box">
+		<div class="taxon">
+			<div class="taxon-header">
+				<h5><span class="taxon-number">1 </span>Deck</h5>
+			</div>
+			<div class="taxon-image">
+				<img src="/spree/wizards/deck_thumb.png" />
+			</div>
+			<div class="taxon-description">
+				<p>Landyachtz Dinghy Mini Longboard Skateboard Deck w/ Grip</p>
+			</div>
+		</div>
+		<div class="taxon selected">
+			<div class="taxon-header">
+				<h5><span class="taxon-number">2 </span>Trucks</h5>
+			</div>
+			<div class="taxon-image">
+				<img src="" />
+			</div>
+			<div class="taxon-description">
+				<p>Choose Trucks Here</p>
+			</div>
+		</div>
+		<div class="taxon">
+			<div class="taxon-header">
+				<h5><span class="taxon-number">3 </span>Wheels</h5>
+			</div>
+			<div class="taxon-image">
+				<img src="" />
+			</div>
+			<div class="taxon-description">
+				<p>Choose Wheels Here</p>
+			</div>
+		</div>
+		<div class="taxon">
+			<div class="taxon-header">
+				<h5><span class="taxon-number">4 </span>Bearings</h5>
+			</div>
+			<div class="taxon-image">
+				<img src="" />
+			</div>
+			<div class="taxon-description">
+				<p>Choose Bearings Here</p>
+			</div>
+		</div>
+		<div id="review-share-box">
+			<div id="review-finish">
+				<h5>Review & Finish</h5>
+			</div>
+			<div id="features">
+				<p>Features</p>
+				<ul>
+					<li>Inspected and tuned</li>
+					<li>Shipped Ready to Ride</li>
+					<li>FREE SHIPPING in the U.S.</li>
+				</ul>
+			</div>
+			<div id="send-setup">
+				<p>Send your current setup</p>
+			</div>
+			<div id="share-setup">
+				<p>Share your current setup</p>
+			</div>
+		</div>
+	</div>
 </div>
 
 <div id="product-selection">
 	<div id="selection-header">
-		<h2>Choose your product:</h2>
-		<h5>Sort:</h5>
+		<h2>Choose your trucks:</h2>
+		<h5>Sort by:</h5>
 		<select id="product-sort">
 			<option value="recommended">Recommended</option>
 			<option value="size">Size</option>
 		</select>
-		<h5>Filter</h5>
+		<h5>Filter by:</h5>
 		<select id="product-filter">
 			<option value="recommended">Recommended</option>
 			<option value="size">Size</option>
 		</select>
 	</div>
 	<br class="clear" />
-	<!-- this will change to @wizard.products or something similar -->
+	<!-- The list of products will populate here -->
 	<div id="product-container">
+		<div class="product">
+			<div class="product-box">
+				<div class="product-stock">
+					Stock
+				</div>
+				<div class="product-image">
+				</div>
+				<div class="product-brand-image">
+				</div>
+				<div class="product-description">
+				</div>
+				<div class="product-price-difference">
+				</div>
+			</div>
+		</div>
+		<a href="#" class="product-arrow-left-link">
+			<span class="product-arrow-left"></span>
+		</a>
 	</div>
 </div>
 

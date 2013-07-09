@@ -3,6 +3,10 @@
   font-weight: bold;
 }
 
+h1, h2, h3, h4, h5, p {
+	color:white;
+}
+
 .left {
 	float:left;
 }
@@ -11,11 +15,32 @@
 	float:right;
 }
 
-#wizard-frame, #product-selection {
+h2 {
+	color:white;
+}
+
+#wizard-frame  {
 	height:300px;
 	width:100%;
 	margin-bottom:20px;
+	background: linear-gradient(to bottom,#1f1f1f 0,#525252 5%,#525252 26%,#000 62%,#262626 84%,#545454 100%);
+	color:white;
+	border-radius:10px;
 }
+
+#product-selection {
+	background:#f7f7f7;
+}
+
+#product-selection h1, 
+#product-selection h2, 
+#product-selection h3, 
+#product-selection h4, 
+#product-selection h5, 
+#product-selection p {
+	color:black;
+}
+
 #product-frame {
 	min-height:500px;
 	width:100%;
@@ -38,27 +63,137 @@
 	font-size:32px;
 	text-align:right;
 }
+
+#wizard-header {
+
+}
+
+.header-text {
+	margin-left:10px;
+	display:inline-block;
+
+
+}
+
+.subtotal {
+	margin-left:100px;
+	display:inline-block;
+}
+
+.subtotal h3 {
+	color:white;
+}
+
+.add-cart {
+	display:inline-block;
+	margin-left:10px;
+}
+
+.add-cart button {
+	width:140px;
+	height:30px;
+	margin-top: -10px;
+}
 .taxon {
-	border:1px solid black;
-	height:200px;
+	
+	width:150px;
+	height:100%;
+	float:left;
+	margin-right:15px;
+	color:white;
+
+}
+
+.taxon-header {
+	background-color:#1b2f4e;
+	text-align:left;
+	width:75%;
+	margin:0 auto 10px auto;
+}
+
+.taxon-header h5 {
+	color:white;
+}
+
+.taxon-header span {
+	margin:10px;
+}
+.taxon-image img {
+	height:117px;
+	width:117px;
+	background-color:white;
+	border:3px solid white;
+	border-radius:5px;
+}
+
+.selected > .taxon-image img {
+	border:3px solid #0f5eb7;
+	border-radius: 5px;
+}
+
+.selected > .taxon-header {
+	background-color:#0f5eb7;
 }
 
 .wizard-box {
-	float:left;
+	
 	text-align:center;
-	width:200px;
-	height:200px;
+	width:100%;
+	height:250px;
 	margin-right:10px;
 }
 
-.product {
-	display:inline-block;
-	text-align:center;
+#review-share-box {
 	width:200px;
-	height:200px;
-	margin-right:10px;
-	border:1px solid black;
-	height:200px;
+	float:right;
+}
+
+#review-finish{
+	height:20px;
+	width:150px;
+	margin:0 auto;
+	background: linear-gradient(to bottom,#365d8f 0,#1a2d4f 80%,#1a2d4f 100%);
+	padding:8px;
+}
+
+#review-finish h5 {
+	color:white;
+}
+
+#product-container {
+	height:310px;
+	width:830px;
+	left:55px;
+	position:relative;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.product {
+	background:#8d8d8d;
+	border:1px solid #adaeb1;
+	border-radius:5px;
+	width:152px;
+	position:relative;
+	padding:3px;
+	text-align:center;
+}
+
+.product-box {
+	background:#ffffff;
+	border:1px solid #6e6e75;
+	height:270px;
+	overflow:hidden;
+	width:150px;
+}
+
+.product-stock {
+	background:linear-gradient(to bottom,#1a1a1a 0,#969696 4%,#4f4f4f 25%,#3b3b3b 74%,#3b3b3b 100%);
+	border-radius:0 0 4px 4px;
+	height:17px;
+	padding-top:5px;
+	position:absolute;
+	left:27px;
+	width:105px;
 }
 
 #selection-header h2, h5, select {
@@ -66,15 +201,9 @@
 }
 
 #selection-header h5 {
-	margin-left:100px;
+	margin-left:90px;
 }
 
-#product-container {
-	position:relative;
-	overflow: hidden;
-	white-space: nowrap;
-	height:202px;
-}
 .product-photo, .product-name, .upgrade-price, .product-option, .add-item, .product-description {
 	border:1px solid black;
 	width:100%;
