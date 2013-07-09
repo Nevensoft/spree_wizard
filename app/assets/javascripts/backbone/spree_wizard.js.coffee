@@ -4,6 +4,7 @@
 #= require_tree ./views
 
 window.SpreeWizard =
+  Routers: {}
   Models: {}
   Collections: {}
   Views: {}
