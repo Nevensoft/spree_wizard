@@ -1,33 +1,20 @@
 <script type="text/javascript">
 	
+
 	$(document).ready(function(){
+
+		var product_collection = new SpreeWizard.Collections.ProductsCollection();
+		var products = $.parseJSON(("<%= j raw Spree::Product.all.to_json %>"));
+		product_collection.reset(products)
 		
-		var wizard_id = 1;
+		var product_view = new SpreeWizard.Views.Products.IndexView({products: product_collection});
+		$('#product-list').html(product_view.render().el);
 
-		var model = new SpreeWizard.Models.Product({id: wizard_id});
-
-		var products_array = new Array(model);
-
-		var products = new SpreeWizard.Collections.ProductsCollection(products_array);
-		
-		var view = new SpreeWizard.Views.Products.IndexView({products: products})
-
-	// 	$.ajax({
-	// 	  url: '/wizards/1',
-	// 	  dataType: 'json',
-	// 	  success: function (data) {
-	// 	    products = new SpreeWizard.Collections.Products(data[0]);
-	// 	  }
-	// 	});
-
-
-	// 	new SpreeWizard.Views.Products.ShowView();
-		
 	});
 	
 </script>
 
-
+<div id="product-list"></div>
 
 <div id="wizard-frame">
 	<div id="wizard-header">
