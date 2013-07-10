@@ -1,5 +1,5 @@
- module Spree
-  class Spree::WizardsController < Spree::StoreController
+module Spree
+  class WizardsController < Spree::StoreController
 
     # GET /wizards
     # GET /wizards.json
