@@ -1,11 +1,7 @@
 //= require store/spree_frontend
-
-
-// BackBone infrastructure for the wizard
-//
-//= require libs/underscore
-//= require libs/backbone
+//= require underscore
+//= require backbone
+//= require backbone_rails_sync
+//= require backbone_datalink
 //= require backbone/spree_wizard
-
-
-//= require ./wizards
+//= require store/wizards
