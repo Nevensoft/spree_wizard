@@ -1,7 +1,7 @@
 <div id="wizard-frame">
   <div id="wizard-header">
     <div class="header-text">
-      <h2>Your Custom Complete with Premium Upgrades:</h2>
+      <h2><%= name %></h2>
     </div>
     <div class="subtotal">
       <h3>Subtotal: $132.95</h3>
@@ -11,51 +11,11 @@
     </div>
   </div>
   <!--Wizard Taxons will loop in here -->
+  
   <div class="wizard-box">
-    <div class="taxon">
-      <div class="taxon-header">
-        <h5><span class="taxon-number">1 </span>Deck</h5>
-      </div>
-      <div class="taxon-image">
-        <img src="/spree/wizards/deck_thumb.png" />
-      </div>
-      <div class="taxon-description">
-        <p>Landyachtz Dinghy Mini Longboard Skateboard Deck w/ Grip</p>
-      </div>
-    </div>
-    <div class="taxon selected">
-      <div class="taxon-header">
-        <h5><span class="taxon-number">2 </span>Trucks</h5>
-      </div>
-      <div class="taxon-image">
-        <img src="" />
-      </div>
-      <div class="taxon-description">
-        <p>Choose Trucks Here</p>
-      </div>
-    </div>
-    <div class="taxon">
-      <div class="taxon-header">
-        <h5><span class="taxon-number">3 </span>Wheels</h5>
-      </div>
-      <div class="taxon-image">
-        <img src="" />
-      </div>
-      <div class="taxon-description">
-        <p>Choose Wheels Here</p>
-      </div>
-    </div>
-    <div class="taxon">
-      <div class="taxon-header">
-        <h5><span class="taxon-number">4 </span>Bearings</h5>
-      </div>
-      <div class="taxon-image">
-        <img src="" />
-      </div>
-      <div class="taxon-description">
-        <p>Choose Bearings Here</p>
-      </div>
-    </div>
+    <div id="steps"></div>
+    
+
     <div id="review-share-box">
       <div id="review-finish">
         <h5>Review & Finish</h5>
@@ -75,8 +35,11 @@
         <p>Share your current setup</p>
       </div>
     </div>
+
   </div>
 </div>
+
+
 
 <div id="product-selection">
   <div id="selection-header">

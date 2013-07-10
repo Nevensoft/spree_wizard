@@ -7,6 +7,7 @@ class SpreeWizard.Views.Wizards.ShowView extends Backbone.View
 
   initialize: ->
     @render()
+    @model.initializeSteps(@model.attributes.taxons)
 
   render: ->
     $(@el).html(@template( @model.toJSON() ))

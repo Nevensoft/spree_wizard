@@ -20,12 +20,11 @@ class SpreeWizard.Models.Wizard extends Backbone.Model
   paramRoot: 'wizard' 
   urlRoot: '/wizards'
 
-  # defaults: 
-  #   name: null   
-  #   steps: [ taxons: [], selected_product: null]
-
-                  # for the linked Spree::WizardTaxon relations 
-                  # defined at example.com/admin/wizards
+  initializeSteps: (steps) ->
+    # steps is array of wizard steps
+    steps_collection = new SpreeWizard.Collections.StepCollections(steps, [])
+    steps_index_view = new SpreeWizard.Views.Steps.IndexView(steps: steps_collection)
+    steps_index_view.render()
 
 class SpreeWizard.Collections.WizardCollection extends Backbone.Collection
   model: SpreeWizard.Models.Wizard
