@@ -6,8 +6,7 @@ Spree::Core::Engine.routes.draw do
 
   resources :wizards, :only => [:index, :show] do 
     collection do 
-      # eventually move this else where.
-      get 'taxon_products/:taxon_id' => 'wizards#taxon_products'
+      get 'taxon/:taxon_id/products' => 'wizards#taxon_products'
     end
   end
 
