@@ -7,4 +7,6 @@ gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '2-0-stable'
 
 gem 'backbone-rails'
 
+gem 'guard-rspec'
+
 gemspec
