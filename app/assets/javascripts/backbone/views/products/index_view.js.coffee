@@ -3,12 +3,9 @@ SpreeWizard.Views.Products ||= {}
 class SpreeWizard.Views.Products.IndexView extends Backbone.View
   template: JST["backbone/templates/products/index"]
 
-  el: $('#product-container')
-
-  initialize: () =>
-    console.log('hello')
+  initialize: () ->
+    @options.products.bind('reset', @addAll)
     
-
   addAll: () =>
     @options.products.each(@addOne)
 
