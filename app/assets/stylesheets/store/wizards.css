@@ -161,12 +161,10 @@ h2 {
 }
 
 #product-container {
-	height:310px;
-	width:830px;
+	height:300px;
 	left:55px;
 	position:relative;
 	overflow: hidden;
-	white-space: nowrap;
 }
 .product {
 	background:#8d8d8d;
@@ -175,7 +173,9 @@ h2 {
 	width:152px;
 	position:relative;
 	padding:3px;
+	margin:8px;
 	text-align:center;
+	float:left;
 }
 
 .product-box {
@@ -204,23 +204,22 @@ h2 {
 	margin-left:90px;
 }
 
-.product-photo, .product-name, .upgrade-price, .product-option, .add-item, .product-description {
-	border:1px solid black;
-	width:100%;
-	margin-bottom:5px;
-}
-
 .product-photo {
 	height:250px;
 	width:250px;
 	margin:10px;
 }
-.product-photo img {
-	height:100%;
-	width:100%;
+.product-image {
+	height: 134px;
+	line-height: 134px;
+	margin-top: 10px;
+	position: relative;
+	text-align: center;
+	width: 150px;
 }
-.product-info {
-	width:600px;
+
+.product-description {
+	padding: 2px 5px;
 }
 
 .product-name {
