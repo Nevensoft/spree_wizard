@@ -1,17 +1,20 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		
-		// bootstrap the wizard model and view
-		// 
-		var wizard = new SpreeWizard.Models.Wizard(<%= @wizard.to_json.html_safe -%>);
-		var view = new SpreeWizard.Views.Wizards.ShowView({model: wizard});
-
-    console.log(wizard.attributes);
+    // initialize model with id
+		var wizard = new SpreeWizard.Models.Wizard({id: <%= @wizard.id %>});
+    
+    // pull down nested data structure from controller
+    wizard.fetch({
+      success: function(model, response, options){
+        new SpreeWizard.Views.Wizards.ShowView({model: model});
+        // view's iniatialize function calls "render()"
+      }
+    });
 	});
 </script>
 
 <div id="wizard"></div>
-
 
 <% # Backbone models/views/templates take care of the rest %>
 <% # see /app/javascripts/backbone/**/*.* for more info %>

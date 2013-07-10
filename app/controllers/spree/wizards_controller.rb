@@ -12,18 +12,28 @@
       end
     end
 
+    # Eager load the wizard's taxons
+    # 
     # GET /wizards/1
     # GET /wizards/1.json
     def show
-      @product = Spree::Product.all
-      @wizard = Spree::Wizard.find(params[:id])
+      @wizard = Spree::Wizard.includes(:taxons).find(params[:id])
 
       respond_to do |format|
         format.html # show.html.erb
-        format.json { render json: @wizard }
+        format.json { render 'spree/wizards/show_api' }
       end
     end
 
+
+    def taxon_products
+      @taxon = Spree::Taxon.includes(products: [:variants]).find(params[:taxon_id])
+
+      respond_to do |format|
+        format.html 
+        format.json { render 'spree/wizards/taxon_products_api' }
+      end
+    end
 
   end
 end

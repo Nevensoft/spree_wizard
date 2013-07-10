@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'spree_core', '~> 2.0.0'
   s.add_dependency 'rails-backbone'
   s.add_dependency 'ejs'
+  s.add_dependency 'rabl'
 
   s.add_development_dependency 'capybara', '~> 2.1'
   s.add_development_dependency 'coffee-rails'
