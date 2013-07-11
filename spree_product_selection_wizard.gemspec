@@ -17,7 +17,6 @@ Gem::Specification.new do |s|
   s.requirements << 'none'
 
   s.add_dependency 'spree_core', '~> 2.0.0'
-  s.add_dependency 'rails-backbone'
   s.add_dependency 'ejs'
   s.add_dependency 'rabl'
 
