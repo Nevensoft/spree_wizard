@@ -13,7 +13,7 @@ class SpreeWizard.Views.Steps.IndexView extends Backbone.View
 
   addOne: (model) =>
     view = new SpreeWizard.Views.Steps.StepView(model : model)
-    @$("tbody").append(view.render().el)
+    view.render()
 
   render: =>
     $(@el).html(@template(steps: @options.steps.toJSON() ))
