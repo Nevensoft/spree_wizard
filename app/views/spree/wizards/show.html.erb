@@ -7,14 +7,22 @@
     // pull down nested data structure from controller
     wizard.fetch({
       success: function(model, response, options){
+        
+        // create a view instance
+        // renders by default on initialize callback
         new SpreeWizard.Views.Wizards.ShowView({model: model});
-        // view's iniatialize function calls "render()"
+
+        // initialize the wizard steps
+        // explicitly creates collection and renders index view
+        model.initializeSteps();
+      
       }
     });
 	});
 </script>
 
-<div id="wizard"></div>
 
 <% # Backbone models/views/templates take care of the rest %>
 <% # see /app/javascripts/backbone/**/*.* for more info %>
+
+<div id="wizard"></div>
