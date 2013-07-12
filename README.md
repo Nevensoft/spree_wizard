@@ -1,13 +1,14 @@
-SpreeProductSelectionWizard
-===========================
+## SpreeProductSelectionWizard
 
-Product Selection Wizard enables Spree Admins to define 
-+ wizard-able taxons
-+ wizard selection order
-+ discounts on prodcut groups
+### Backbone Methodologies
+We create SpreeProductSelectionWizard with these options in mind.
+- a Backbone.View is __always__ rendered in initialize callback
 
-Installation
-------------
+
+--------------------------------------------------------------------------------
+__Standard Spree Exention Stuff__
+
+### Installation
 
 Add spree_product_selection_wizard to your Gemfile:
 
@@ -23,10 +24,7 @@ bundle exec rails g spree_product_selection_wizard:install
 ```
 
 
-
-Development
------------
-
+### Development
 To setup a spree site for working on the spree extension, you'll want to create 
 a 'dummy' app.
 
@@ -43,11 +41,7 @@ rake app:db:migrate
 ```
 
 
-
-
-Testing
--------
-
+### Testing
 Be sure to bundle your dependencies and then create a dummy test app for the specs to run against.
 
 ```shell
@@ -64,6 +58,5 @@ require 'spree_product_selection_wizard/factories'
 ```
 
 
-Credits
--------
+### Credits
 Copyright (c) 2013 Weston Platter, released under the MIT License.
