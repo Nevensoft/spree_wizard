@@ -3,6 +3,7 @@ module Spree
 
     # GET /wizards
     # GET /wizards.json
+    # 
     def index
       @wizards = Spree::Wizard.all
 
@@ -16,6 +17,7 @@ module Spree
     # 
     # GET /wizards/1
     # GET /wizards/1.json
+    # 
     def show
       @wizard = Spree::Wizard.includes(:taxons).find(params[:id])
 
@@ -25,7 +27,12 @@ module Spree
       end
     end
 
-
+    # Send back all products and associated variants for a taxon. 
+    # Reponse is JSON response for all request types. 
+    # Associations are eager loaded.
+    #
+    # GET /wizards/taxon/1/products
+    # 
     def taxon_products
       @taxon = Spree::Taxon.includes(products: [:variants]).find(params[:taxon_id])
       render 'spree/wizards/taxon_products_api.json.rabl'
