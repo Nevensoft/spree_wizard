@@ -7,7 +7,7 @@
 # 
 # == Step
 #    > taxon
-#    > products (belonging to step
+#    > products (belonging to step)
 # 
 # 
 # ------------------------------------------------------------------------------

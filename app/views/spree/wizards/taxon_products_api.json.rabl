@@ -23,7 +23,7 @@ object @taxon
 attributes :id, :name
 
 child :products do 
-  attributes :id, :name
+  attributes :id, :name, :price
 
   child :variants do 
     attributes :id, :price

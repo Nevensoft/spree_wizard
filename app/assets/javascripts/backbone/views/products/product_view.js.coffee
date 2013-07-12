@@ -3,16 +3,12 @@ SpreeWizard.Views.Products ||= {}
 class SpreeWizard.Views.Products.ProductView extends Backbone.View
   template: JST["backbone/templates/products/product"]
 
-  events:
-    "click .destroy" : "destroy"
+  className: 'product'
 
-  tagName: "tr"
+  events: 
+    "click" : "display_product_detail"
 
-  destroy: () ->
-    @model.destroy()
-    this.remove()
-
-    return false
+  display_product_detail: () ->
 
   render: ->
     $(@el).html(@template(@model.toJSON() ))
