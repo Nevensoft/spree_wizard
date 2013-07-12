@@ -9,6 +9,11 @@
 #    > taxon
 #    > products (belonging to step)
 # 
+# == Product
+#    > variants
+# 
+# == Variant
+#    > (product details not found on the product)
 # 
 # ------------------------------------------------------------------------------
 
