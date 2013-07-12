@@ -21,18 +21,14 @@ module Spree
 
       respond_to do |format|
         format.html # show.html.erb
-        format.json { render 'spree/wizards/show_api' }
+        format.json { render 'spree/wizards/show_api.json.rabl' }
       end
     end
 
 
     def taxon_products
       @taxon = Spree::Taxon.includes(products: [:variants]).find(params[:taxon_id])
-
-      respond_to do |format|
-        format.html 
-        format.json { render 'spree/wizards/taxon_products_api' }
-      end
+      render 'spree/wizards/taxon_products_api.json.rabl'
     end
 
   end
