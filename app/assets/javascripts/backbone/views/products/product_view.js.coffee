@@ -9,6 +9,8 @@ class SpreeWizard.Views.Products.ProductView extends Backbone.View
     "click" : "display_product_detail"
 
   display_product_detail: () ->
+    view = new SpreeWizard.Views.Products.DetailView(model: @model)
+    view.render()
 
   render: ->
     $(@el).html(@template(@model.toJSON() ))

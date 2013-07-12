@@ -20,7 +20,6 @@
 #
 
 object @taxon
-attributes :id, :name
 
 child :products do 
   attributes :id, :name, :price

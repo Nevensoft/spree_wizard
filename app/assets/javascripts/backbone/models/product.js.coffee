@@ -24,7 +24,7 @@ class SpreeWizard.Collections.ProductsCollection extends Backbone.Collection
 
   
   render_index: (products) =>
-    v = new SpreeWizard.Views.Products.IndexView( products: new SpreeWizard.Collections.ProductsCollection(products) )
+    v = new SpreeWizard.Views.Products.IndexView( products: new SpreeWizard.Collections.ProductsCollection(products))
     v.render()
 
 
