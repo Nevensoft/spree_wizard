@@ -1,9 +1,10 @@
 SpreeWizard.Views.Steps ||= {}
 
 class SpreeWizard.Views.Steps.IndexView extends Backbone.View
-  el: '#steps'
   template: JST["backbone/templates/steps/index"]
 
+  el: '#steps'
+  
   initialize: () ->
     @options.steps.bind('reset', @addAll)
     
