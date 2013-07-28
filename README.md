@@ -1,6 +1,8 @@
-## SpreeWizards
+SpreeWizards
+============
 
 ### JS/Backbone Methodologies
+
 We created SpreeWizards with these options in mind.
 
 --------------------------------------------------------------------------------
