@@ -1,5 +1,5 @@
 /*
- * spree_product_selection_wizard
+ * spree_wizards
  */
 
 

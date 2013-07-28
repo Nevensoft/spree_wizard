@@ -30,8 +30,8 @@ require 'spree/testing_support/controller_requests'
 require 'spree/testing_support/authorization_helpers'
 require 'spree/testing_support/url_helpers'
 
-# Requires factories defined in lib/spree_product_selection_wizard/factories.rb
-require 'spree_product_selection_wizard/factories'
+# Requires factories defined in lib/spree_wizards/factories.rb
+require 'spree_wizards/factories'
 
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods

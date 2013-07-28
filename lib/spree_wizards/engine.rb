@@ -1,8 +1,8 @@
-module SpreeProductSelectionWizard
+module SpreeWizards
   class Engine < Rails::Engine
     require 'spree'
     isolate_namespace Spree
-    engine_name 'spree_product_selection_wizard'
+    engine_name 'spree_wizards'
 
     config.autoload_paths += %W(#{config.root}/lib)
 

@@ -1,10 +1,10 @@
 # encoding: UTF-8
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
-  s.name        = 'spree_product_selection_wizard'
+  s.name        = 'spree_wizards'
   s.version     = '2.0.0'
-  s.summary     = 'Wizard step through to select products'
-  s.description = 'Flexible Spree::Admin defined wizard step through process to select product groups'
+  s.summary     = 'Spree multi product selelction wizard forms'
+  s.description = 'Spree multi product selelction wizard forms'
   s.required_ruby_version = '>= 1.9.3'
 
   s.author    = 'weston platter'

@@ -10,11 +10,11 @@ task :default => [:spec]
 
 desc 'Generates a dummy app for testing'
 task :test_app do
-  ENV['LIB_NAME'] = 'spree_product_selection_wizard'
+  ENV['LIB_NAME'] = 'spree_wizards'
   Rake::Task['extension:test_app'].invoke
 end
 
-if File.exists?('./spec/dummy/Rakefile')
-  APP_RAKEFILE = File.expand_path('../spec/dummy/Rakefile', __FILE__)
-  load 'rails/tasks/engine.rake'
-end
+# if File.exists?('./spec/dummy/Rakefile')
+#   APP_RAKEFILE = File.expand_path('../spec/dummy/Rakefile', __FILE__)
+#   load 'rails/tasks/engine.rake'
+# end
