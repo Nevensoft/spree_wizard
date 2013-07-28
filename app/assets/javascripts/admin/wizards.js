@@ -1,5 +1,5 @@
 /*
- * spree_wizards
+ * spree_wizard
  */
 
 

@@ -1,7 +1,7 @@
 # encoding: UTF-8
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
-  s.name        = 'spree_wizards'
+  s.name        = 'spree_wizard'
   s.version     = '2.0.0'
   s.summary     = 'Spree multi product selelction wizard forms'
   s.description = 'Spree multi product selelction wizard forms'

@@ -1,26 +1,26 @@
-SpreeWizards
+SpreeWizard
 ============
 
 ### JS/Backbone Methodologies
 
-We created SpreeWizards with these options in mind.
+We created SpreeWizard with these options in mind.
 
 --------------------------------------------------------------------------------
 __Standard Spree Exention Stuff__
 
 ### Installation
 
-Add spree_wizards to your Gemfile:
+Add spree_wizard to your Gemfile:
 
 ```ruby
-gem 'spree_wizards'
+gem 'spree_wizard'
 ```
 
 Bundle your dependencies and run the installation generator:
 
 ```shell
 bundle
-bundle exec rails g spree_wizards:install
+bundle exec rails g spree_wizard:install
 ```
 
 
@@ -29,7 +29,7 @@ To setup a spree site for working on the spree extension, you'll want to create
 a 'dummy' app.
 
 ```shell
-# within spree_wizards
+# within spree_wizard
 rake test_app
 ```
 
@@ -54,7 +54,7 @@ When testing your applications integration with this extension you may use it's 
 Simply add this require statement to your spec_helper:
 
 ```ruby
-require 'spree_wizards/factories'
+require 'spree_wizard/factories'
 ```
 
 
