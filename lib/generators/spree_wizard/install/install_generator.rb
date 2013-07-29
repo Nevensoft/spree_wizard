@@ -13,7 +13,6 @@ module SpreeWizard
         inject_into_file 'app/assets/stylesheets/store/all.css', " *= require store/spree_wizard\n", before: /\*\//, verbose: true
         inject_into_file 'app/assets/stylesheets/admin/all.css', " *= require admin/spree_wizard\n", before: /\*\//, verbose: true
       end
-      end
 
       def add_migrations
         run 'bundle exec rake railties:install:migrations FROM=spree_wizard'
