@@ -40,6 +40,14 @@ This creates a Spree rails app with the Spree extension already setup in the
 rake app:db:migrate
 ```
 
+To get the sample data fro developing SpreeWizard, do the following,
+```shell
+cd spec/dummy
+rake db:seed
+rake spree_sample:load
+rake spree_wizard:sample_load
+```
+
 
 ### Testing
 Be sure to bundle your dependencies and then create a dummy test app for the specs to run against.

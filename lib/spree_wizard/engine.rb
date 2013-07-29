@@ -5,6 +5,10 @@ module SpreeWizard
     engine_name 'spree_wizard'
 
     config.autoload_paths += %W(#{config.root}/lib)
+    
+    rake_tasks do 
+      load 'spree_wizard/railties/sample_load.rake'
+    end
 
     # use rspec for tests
     config.generators do |g|
