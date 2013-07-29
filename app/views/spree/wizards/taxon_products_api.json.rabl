@@ -23,6 +23,9 @@ object @taxon
 
 child :products do 
   attributes :id, :name, :price
+  
+  node(:attachment_url) { |p| p.images.try(:first).try(:attachment).try(:url) } 
+  node(:announcement )  { false }
 
   child :variants do 
     attributes :id, :price

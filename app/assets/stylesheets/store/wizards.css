@@ -1,3 +1,9 @@
+z
+/*
+*
+* spree_wizard
+*
+*/
 
 #example {
   font-weight: bold;
@@ -162,10 +168,10 @@ h2 {
 }
 
 #product-container {
-	height:300px;
+	height:350px;
 	left:55px;
 	position:relative;
-	overflow: hidden;
+	/*overflow: auto;*/
 }
 .product {
 	background:#8d8d8d;
@@ -187,7 +193,7 @@ h2 {
 	width:150px;
 }
 
-.product-stock {
+.product-announcement {
 	background:linear-gradient(to bottom,#1a1a1a 0,#969696 4%,#4f4f4f 25%,#3b3b3b 74%,#3b3b3b 100%);
 	border-radius:0 0 4px 4px;
 	height:17px;
@@ -210,10 +216,10 @@ h2 {
 	width:250px;
 	margin:10px;
 }
-.product-image {
-	height: 134px;
-	line-height: 134px;
-	margin-top: 10px;
+.product-image img{
+	height: 120px;
+	line-height: 120px;
+	margin-top: 40px;
 	position: relative;
 	text-align: center;
 	width: 150px;

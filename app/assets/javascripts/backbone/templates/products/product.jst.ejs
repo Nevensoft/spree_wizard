@@ -1,7 +1,9 @@
 <div class="product-box">
-  <div class="product-stock">Stock</div>
+  <%if ( true && announcement ) { %>
+    <div class="product-announcement">Info</div>
+  <% } %>
   <div class="product-image">
-    <img src="" />
+    <img src="<%= attachment_url %>" />
   </div>
   <div class="product-description">
     <img src="" />
