@@ -19,7 +19,7 @@
 
 
 class SpreeWizard.Models.Wizard extends Backbone.Model
-  paramRoot: 'wizard' 
+  # paramRoot: 'wizard' # paramRoot not working as rails-backbone described 
   urlRoot: '/wizards'
 
   initializeSteps: () ->

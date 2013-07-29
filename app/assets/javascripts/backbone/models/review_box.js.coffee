@@ -1,5 +1,5 @@
 class SpreeWizard.Models.ReviewBox extends Backbone.Model
-  # paramRoot: 'step' # paramRoot not working
+  # paramRoot: 'step' # paramRoot not working as rails-backbone described
   # no url. comes from wizard initialization
 
 class SpreeWizard.Collections.ReviewBoxCollection extends Backbone.Collection
