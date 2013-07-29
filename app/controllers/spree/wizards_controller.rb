@@ -23,7 +23,7 @@ module Spree
 
       respond_to do |format|
         format.html # show.html.erb
-        format.json { render 'spree/wizards/show_api.json.rabl' }
+        format.json { render 'spree/wizards/show_api' }
       end
     end
 
@@ -35,7 +35,7 @@ module Spree
     # 
     def taxon_products
       @taxon = Spree::Taxon.includes(products: [:variants]).find(params[:taxon_id])
-      render 'spree/wizards/taxon_products_api.json.rabl'
+      render 'spree/wizards/taxon_products_api', formats: :json
     end
 
   end
