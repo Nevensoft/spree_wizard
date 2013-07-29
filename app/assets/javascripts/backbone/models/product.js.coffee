@@ -9,23 +9,21 @@ class SpreeWizard.Collections.ProductsCollection extends Backbone.Collection
   initialize: (models, arg) ->
     # _.bindAll('set_taxon_products', @render_taxon_products)
 
-  set_taxon_products: (taxon_id) =>
-    that = this
-    root = 'products'
+  set_taxon_products: (taxon_id) ->
     url  = "/wizards/taxon/" + taxon_id + "/products"
 
-    $.ajax
-      type: 'get'
-      url: url
-      success: (data, textStatus, jqXHR) ->
-        that.render_index(data.products)
+    $.ajax url,
+      type: 'GET'
+      success: (data, textStatus, jqXHR) =>
+        @render_fetched_products(data.products)
 
         # TODO need to come up with render logic when data.products.size = 0
 
-  
-  render_index: (products) =>
-    v = new SpreeWizard.Views.Products.IndexView( products: new SpreeWizard.Collections.ProductsCollection(products))
-    v.render()
+  render_fetched_products: (products) ->
+    product_collection = new SpreeWizard.Collections.ProductsCollection(products)
+    collection_view = new SpreeWizard.Views.Products.IndexView(products: product_collection)
+    collection_view.render()
+    
 
 
 
