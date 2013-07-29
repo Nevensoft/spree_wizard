@@ -10,6 +10,7 @@ class SpreeWizard.Collections.ProductsCollection extends Backbone.Collection
     # _.bindAll('set_taxon_products', @render_taxon_products)
 
   set_taxon_products: (taxon_id) ->
+    $('#product-frame').html('')
     url  = "/wizards/taxon/" + taxon_id + "/products"
 
     $.ajax url,
