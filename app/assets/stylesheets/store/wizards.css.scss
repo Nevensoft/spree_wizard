@@ -71,15 +71,11 @@ h2 {
 	text-align:right;
 }
 
-#wizard-header {
-
-}
+#wizard-header {}
 
 .header-text {
 	margin-left:10px;
 	display:inline-block;
-
-
 }
 
 .subtotal {
@@ -101,14 +97,13 @@ h2 {
 	height:30px;
 	margin-top: -10px;
 }
-.taxon {
-	
+
+.taxon {	
 	width:150px;
 	height:100%;
 	float:left;
 	margin-right:15px;
 	color:white;
-
 }
 
 .taxon-header {
@@ -116,21 +111,32 @@ h2 {
 	text-align:left;
 	width:75%;
 	margin:0 auto 10px auto;
+
+	h5 {
+		color:white;
+	}
+
+	span {
+		margin:10px;
+	}
 }
 
-.taxon-header h5 {
-	color:white;
-}
-
-.taxon-header span {
-	margin:10px;
-}
 .taxon-image img {
 	height:117px;
 	width:117px;
 	background-color:white;
 	border:3px solid white;
 	border-radius:5px;
+}
+
+.selected-product {
+	img {
+		height:117px;
+		width:117px;
+		background-color:white;
+		border:3px solid white;
+		border-radius:5px;
+	}
 }
 
 .selected > .taxon-image img {
@@ -143,7 +149,6 @@ h2 {
 }
 
 .wizard-box {
-	
 	text-align:center;
 	width:100%;
 	height:250px;
@@ -173,6 +178,7 @@ h2 {
 	position:relative;
 	/*overflow: auto;*/
 }
+
 .product {
 	background:#8d8d8d;
 	border:1px solid #adaeb1;
@@ -216,6 +222,7 @@ h2 {
 	width:250px;
 	margin:10px;
 }
+
 .product-image img{
 	height: 120px;
 	line-height: 120px;
@@ -232,6 +239,7 @@ h2 {
 .product-name {
 	padding:5px 0 5px 0;
 }
+
 .product-name p {
 	font-weight:bold;
 	font-size:30px;
@@ -240,6 +248,4 @@ h2 {
 	padding:0;
 }
 
-.upgrade-price{
-
-}
+.upgrade-price{ }
