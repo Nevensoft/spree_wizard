@@ -22,7 +22,7 @@
 object @taxon
 
 child :products do 
-  attributes :id, :name, :price
+  attributes :id, :name, :price, :description
   
   node(:attachment_url) { |p| p.images.try(:first).try(:attachment).try(:url) } 
   node(:announcement )  { false }

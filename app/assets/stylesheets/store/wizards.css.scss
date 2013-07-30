@@ -5,6 +5,7 @@ z
 *
 */
 
+
 #example {
   font-weight: bold;
 }
@@ -53,6 +54,7 @@ h2 {
 	margin-bottom:20px;
 	background: #526884;
 }
+
 #left-product-nav {
 	float:left;
 	width:45px;
@@ -71,7 +73,8 @@ h2 {
 	text-align:right;
 }
 
-#wizard-header {}
+#wizard-header {
+}
 
 .header-text {
 	margin-left:10px;
@@ -176,7 +179,6 @@ h2 {
 	height:350px;
 	left:55px;
 	position:relative;
-	/*overflow: auto;*/
 }
 
 .product {

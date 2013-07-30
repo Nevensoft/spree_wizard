@@ -1,10 +1,13 @@
 SpreeWizard.Views.Products ||= {}
 
-class SpreeWizard.Views.Products.DetailView extends Backbone.View
+class SpreeWizard.Views.Products.DetailView extends Marionette.ItemView
   template: JST["backbone/templates/products/detail_view"]
-
+  
   el: '#product-frame'
-
-  render: ->
-    $(@el).html(@template(@model.toJSON() ))
-    return this
+  
+  events: 
+    'click button' : 'select_this_product'
+    
+  select_this_product: =>
+    alert 'clicked button'
+    

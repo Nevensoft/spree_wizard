@@ -1,27 +1,26 @@
-<!--
-  
-  NOTE: 
-  index.jst.ejs 
-  intentionally left blank.
+<div id="selection-header">
+  <h2>Choose your:</h2>
+  <h5>Sort by:</h5>
+  <select id="product-sort">
+    <option value="recommended">Recommended</option>
+    <option value="size">Size</option>
+  </select>
+  <h5>Filter by:</h5>
+  <select id="product-filter">
+    <option value="recommended">Recommended</option>
+    <option value="size">Size</option>
+  </select>
+</div>
 
-  the SpreeWizard.Views.Product.Index specifies el: '#product-list'
+<a href="#" class="product-arrow-left-link">
+  <span class="product-arrow-left"></span>
+</a>
+<a href="#" class="product-arrow-right-link">
+  <span class="product-arrow-right"></span>
+</a>
 
-  therefore, we append step instance views to that el: '#product-list' rather
-  than putting more HTML here.
+<div id="product-container">
+  <div id="product-list"></div>
+</div>
 
--->
-
-  <div id="selection-header">
-    <h2>Choose your:</h2>
-    <h5>Sort by:</h5>
-    <select id="product-sort">
-      <option value="recommended">Recommended</option>
-      <option value="size">Size</option>
-    </select>
-    <h5>Filter by:</h5>
-    <select id="product-filter">
-      <option value="recommended">Recommended</option>
-      <option value="size">Size</option>
-    </select>
-  </div>
-  <br class="clear" />
+<br class="clear" />

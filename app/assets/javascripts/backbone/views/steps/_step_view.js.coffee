@@ -11,3 +11,5 @@ class SpreeWizard.Views.Steps.StepView extends Marionette.ItemView
   fetch_products: ->
     c = new SpreeWizard.Collections.ProductsCollection()
     c.set_taxon_products(@model.attributes.id)
+    
+    console.log @model.attributes.id
