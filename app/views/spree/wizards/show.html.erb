@@ -4,18 +4,17 @@
     // initialize model with id
     var wizard = new SpreeWizard.Models.Wizard({id: <%= @wizard.id %>});
     
+    
+    
     // pull down nested data structure from controller
     wizard.fetch({
-      success: function(model, response, options){
+      success: function(wizard_model, response, options){
         
         // create a view instance
         // renders by default on initialize callback
-        new SpreeWizard.Views.Wizards.ShowView({model: model});
-
-        // initialize the wizard steps
-        // explicitly creates collection and renders index view
-        model.initializeSteps();
-          
+        var wizard_show_view = new SpreeWizard.Views.Wizards.ShowView({model:wizard_model});
+        
+        wizard_show_view.render();
       }
     });
   });
