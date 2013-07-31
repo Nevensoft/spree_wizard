@@ -27,7 +27,7 @@ h2 {
 }
 
 #wizard-frame  {
-	height:300px;
+	height:350px;
 	width:100%;
 	margin-bottom:20px;
 	background: linear-gradient(to bottom,#1f1f1f 0,#525252 5%,#525252 26%,#000 62%,#262626 84%,#545454 100%);
@@ -36,7 +36,9 @@ h2 {
 }
 
 #product-selection {
+	border-radius:10px;
 	background:#f7f7f7;
+	margin-bottom:20px;
 }
 
 #product-selection h1, 
@@ -74,6 +76,15 @@ h2 {
 }
 
 #wizard-header {
+	height:35px;
+	padding: 8px 4px 10px 10px;
+	background:linear-gradient(to bottom,#828282 0,#828282 1%,#5e5e5e 19%,#151515 65%,#000 86%,#424242 100%);
+	border-radius: 10px 10px 0 0;
+}
+
+.wizard-header-right {
+	float:right;
+	margin-right:10px;
 }
 
 .header-text {
@@ -107,21 +118,29 @@ h2 {
 	float:left;
 	margin-right:15px;
 	color:white;
-}
-
-.taxon-header {
-	background-color:#1b2f4e;
-	text-align:left;
-	width:75%;
-	margin:0 auto 10px auto;
+	overflow:hidden;
 
 	h5 {
+		display:block;
+		background-color:#1b2f4e;
+		background-image:linear-gradient(to top,rgba(0,0,0,0) 0,rgba(0,0,0,0) 50%,rgba(55,155,255,0.1) 50%,rgba(55,155,255,0.3) 100%);
+		width:128px;
+		height:35px;
+		margin:10px;
 		color:white;
+		border-radius:10px;
+		line-height:34px;
+		text-align:left;
+		text-transform:uppercase;
 	}
 
 	span {
 		margin:10px;
 	}
+}
+
+.taxon:hover h5, .taxon:hover h5:after {
+	background-color:#111;
 }
 
 .taxon-image img {
@@ -156,29 +175,63 @@ h2 {
 	width:100%;
 	height:250px;
 	margin-right:10px;
+	border-top:1px solid #1f1f1f;
 }
 
 #review-share-box {
 	width:200px;
 	float:right;
+	margin:10px;
+	text-align:left;
+
 }
 
-#review-finish{
-	height:20px;
-	width:150px;
-	margin:0 auto;
-	background: linear-gradient(to bottom,#365d8f 0,#1a2d4f 80%,#1a2d4f 100%);
+#review-finish {
+
+	margin:0 0 10px 0;
+
+	h5 {
+		display:block;
+		background-color:#1b2f4e;
+		background-image:linear-gradient(to top,rgba(0,0,0,0) 0,rgba(0,0,0,0) 50%,rgba(55,155,255,0.1) 50%,rgba(55,155,255,0.3) 100%);
+		width:150px;
+		height:35px;
+		margin:0 auto;
+		color:white;
+		border-radius:10px;
+		line-height:34px;
+		text-align:center;
+		text-transform:uppercase;
+	}
+	
+}	
+
+#review-finish:hover h5, #review-finish:hover h5:after {
+	background-color:#111;
+}
+
+#review-features {
+	background:#222;
+	border:1px solid #6e6e6e;
 	padding:8px;
+	border-radius:5px;
+	margin-bottom:5px;
 }
 
-#review-finish h5 {
-	color:white;
+#review-send-setup, #review-share-setup {
+	border:1px solid #6e6e6e;
+	border-radius:5px;
+	padding:4px 8px;
+	margin-bottom:8px;
 }
 
 #product-container {
 	height:350px;
-	left:55px;
 	position:relative;
+}
+
+#product-list-container {
+	overflow-x:scroll;
 }
 
 .product {
@@ -211,12 +264,26 @@ h2 {
 	width:105px;
 }
 
+#selection-header {
+	border-radius:10px 10px 0 0;
+	line-height:50px;
+	padding-left:10px;
+	background:linear-gradient(to bottom,#f2f2f2 0,#f2f2f2 1%,#d9d9d9 65%,#d9d9d9 77%,#ededed 100%);
+	h2 {
+		line-height:50px;
+	}
+}
 #selection-header h2, h5, select {
 	display:inline;
 }
 
 #selection-header h5 {
 	margin-left:90px;
+}
+
+#product-dropdowns {
+	float:right;
+	margin-right:10px;
 }
 
 .product-photo {

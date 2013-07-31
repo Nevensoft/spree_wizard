@@ -18,6 +18,8 @@ class SpreeWizard.Collections.ProductsCollection extends Backbone.Collection
         # TODO need to come up with render logic when data.products.size = 0
 
   render_fetched_products: (products) ->
+    product_list_width = products.length * 180
     product_collection = new SpreeWizard.Collections.ProductsCollection(products)    
     collection_view = new SpreeWizard.Views.Products.IndexView(collection: product_collection)
     collection_view.render()
+    $('#product-list').css('width', product_list_width + 'px')

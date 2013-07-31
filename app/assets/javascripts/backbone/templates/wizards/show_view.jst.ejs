@@ -5,11 +5,13 @@
       <h2><%= name %></h2>
     </div>
     
-    <div class="subtotal">
-      <h3>Subtotal: $yy.xx</h3>
-    </div>
-    <div class="add-cart">
-      <button value="Add To Cart">Add To Cart</button>
+    <div class="wizard-header-right">
+      <div class="subtotal">
+        <h3>Subtotal: $yy.xx</h3>
+      </div>
+      <div class="add-cart">
+        <button value="Add To Cart">Add To Cart</button>
+      </div>
     </div>
   </div>
   
@@ -21,8 +23,15 @@
 
 
 <div id="product-selection">
+
   <div id="product-container">
+    <a href="#" class="product-arrow-left-link">
+      <span class="product-arrow-left"></span>
+    </a>
     <div id="product-list"></div>
+    <a href="#" class="product-arrow-right-link">
+      <span class="product-arrow-right"></span>
+    </a>
   </div>
 </div>
 
