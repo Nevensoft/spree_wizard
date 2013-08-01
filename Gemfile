@@ -3,9 +3,12 @@ source 'https://rubygems.org'
 # Provides basic authentication functionality for testing parts of your engine
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '2-0-stable'
 
-gem 'rails-backbone', github: 'westonplatter/backbone-rails'
+
+# backbone 1.0.0
+gem 'railsy_backbone', github: 'westonplatter/railsy-backbone'
+
+# marionette 1.0.4 (ideally backbone 1.0)
 gem 'marionette-rails'
 
-gem 'guard-rspec'
 
 gemspec
