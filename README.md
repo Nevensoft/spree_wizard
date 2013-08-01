@@ -1,6 +1,8 @@
 SpreeWizard
 ============
 
+[![Build Status](https://travis-ci.org/westonplatter/spree_wizard.png?branch=master)](https://travis-ci.org/westonplatter/spree_wizard)
+
 ### JS/Backbone Methodologies
 
 ... more to come on this... 
