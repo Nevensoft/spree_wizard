@@ -3,9 +3,10 @@ SpreeWizard
 
 ### JS/Backbone Methodologies
 
-We created SpreeWizard with these options in mind.
+... more to come on this... 
 
 --------------------------------------------------------------------------------
+
 __Standard Spree Exention Stuff__
 
 ### Installation
@@ -37,7 +38,8 @@ This creates a Spree rails app with the Spree extension already setup in the
 ```spec/dummy``` app. To apply new migrations to the ```spre/dummy``` app,
 
 ```shell
-rake app:db:migrate
+cd spec/dummy
+rake db:migrate
 ```
 
 To get the sample data fro developing SpreeWizard, do the following,
