@@ -1,12 +1,41 @@
-<h1><%= name %></h1>
-
-<div id="product-image">
-  <img src="<%= attachment_url %>"></img>
+<div id="product-detail-header">
+	<h3>View and Add Your Selected Product:</h3>
 </div>
+<div id="product-detail-body">
 
-<p><%= description %></p>
+	
+	<div class="left" id="product-detail-left-column">
+		<div id="product-photo">
+		  <img src="<%= attachment_url %>"></img>
+		</div>
+	</div>
 
-<button class="btn product-add">Add to Package</button>
+	<div class="right" id="product-detail-right-column">
+		<h1><%= name %></h1>
 
-<div id="product-detail-selection"></div>
+		<div id="product-details-form">
+			<div id="upgrade-price">
+				<h3><strong>Upgrade Price:</strong> Add $<%= price%></h3>
+			</div>
 
+			<div id="product-detail-option">
+				<h3>Option:</h3>
+				<select id="detail-option">
+					<option value="default">Choose variation</option>
+					<option value="red">Red</option>
+					<option value="blue">Blue</option>
+				</select>
+			</div>
+
+			<button class="btn product-add">Add to Package</button>
+			<br />
+			<p>TIP: To change the item, choose a different part above and click Add to Package.</p>
+		</div>
+
+		<h3>Description:</h3>
+		<p><%= description %></p>
+
+		<div id="product-detail-selection"></div>
+	</div>
+	<br class="clear" />
+</div>

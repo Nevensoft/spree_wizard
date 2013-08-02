@@ -3,7 +3,7 @@ SpreeWizard.Views.Products ||= {}
 class SpreeWizard.Views.Products.DetailView extends Marionette.ItemView
   template: JST["backbone/templates/products/detail_view"]
   
-  el: '#product-frame'
+  el: '#product-detail-frame'
       
   select_this_product: (e) ->
     alert 'clicked button'

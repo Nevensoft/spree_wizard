@@ -7,7 +7,7 @@ class SpreeWizard.Collections.ProductsCollection extends Backbone.Collection
   url: '/api/products'
 
   set_taxon_products: (taxon_id) ->
-    $('#product-frame').html('')
+    $('#product-detail-frame').html('')
     url  = "/wizards/taxon/" + taxon_id + "/products"
 
     $.ajax url,
