@@ -221,8 +221,59 @@
 	position:relative;
 }
 
+#product-list-hide-scrollbar {
+	overflow:hidden;
+	height:320px;
+}
+
+#product-arrow-left {
+	width:60px;
+	height:325px;
+	background:linear-gradient(to right,rgba(247,247,247,1) 0,rgba(247,247,247,1) 80%,rgba(247,247,247,0) 100%);
+	position:absolute;
+	left:0;
+	z-index:1;
+	span {
+		background-image:url(/lb2_sprite.png);
+		background-repeat:no-repeat;
+		//background-position:-6px -232px;
+		background-position:-120px -232px;
+		left:0;
+		width:48px;
+		height:74px;
+		margin-top:-36px;
+		top:50%;
+		position:absolute;
+	}
+}
+
+#product-arrow-right {
+	width:60px;
+	height:325px;
+	background:linear-gradient(to left,rgba(247,247,247,1) 0,rgba(247,247,247,1) 80%,rgba(247,247,247,0) 100%);
+	position:absolute;
+	right:0;
+	span {
+		background-image:url(/lb2_sprite.png);
+		background-repeat:no-repeat;
+		background-position:-287px -232px;
+		right:0;
+		width:48px;
+		height:74px;
+		margin-top:-36px;
+		top:50%;
+		position:absolute;
+	}
+}
+
 #product-list-container {
-	overflow-x:scroll;
+	overflow:scroll;
+}
+
+#product-list {
+	margin-left:50px;
+	position:relative;
+	left:0;
 }
 
 #selection-header {
