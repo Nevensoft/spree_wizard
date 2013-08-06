@@ -123,6 +123,10 @@
 	background-color:#111;
 }
 
+.taxon:hover img, .taxon:hover img:after {
+	border-color:#111;
+}
+
 .taxon-image img {
 	height:117px;
 	width:117px;
@@ -234,7 +238,7 @@
 	left:0;
 	z-index:1;
 	span {
-		background-image:url(/assets/spree_wizard/store/lb2_sprite.png);
+		background-image:url(/assets/spree_wizard/store/wizard_sprite.png);
 		background-repeat:no-repeat;
 		//background-position:-6px -232px;
 		background-position:-120px -232px;
@@ -254,7 +258,7 @@
 	position:absolute;
 	right:0;
 	span {
-		background-image:url(/assets/spree_wizard/store/lb2_sprite.png);
+		background-image:url(/assets/spree_wizard/store/wizard_sprite.png);
 		background-repeat:no-repeat;
 		background-position:-287px -232px;
 		right:0;
