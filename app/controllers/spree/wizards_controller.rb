@@ -23,7 +23,7 @@ module Spree
 
       respond_to do |format|
         format.html # show.html.erb
-        format.json { render 'spree/wizards/show_api' }
+        format.json { render 'spree/wizards/show_api', object: @wizard }
       end
     end
 
@@ -42,7 +42,7 @@ module Spree
       # @taxon = Spree::Taxon.includes(products: [variants: [:option_values]]).find(params[:taxon_id])
       # Completed 200 OK in 224ms (Views: 165.6ms | ActiveRecord: 6.0ms)
       
-      render 'spree/wizards/taxon_products_api', formats: :json
+      render 'spree/wizards/taxon_products_api', formats: :json, object: @taxon
     end
 
   end
