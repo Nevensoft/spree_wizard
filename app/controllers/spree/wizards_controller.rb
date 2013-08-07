@@ -19,7 +19,7 @@ module Spree
     # GET /wizards/1.json
     # 
     def show
-      @wizard = Spree::Wizard.includes(:taxons).find(params[:id])
+      @wizard = Spree::Wizard.find(params[:id])
 
       respond_to do |format|
         format.html # show.html.erb
