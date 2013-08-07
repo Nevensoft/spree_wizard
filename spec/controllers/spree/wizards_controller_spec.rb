@@ -34,7 +34,7 @@ describe Spree::WizardsController do
   end
 
   describe 'GET #taxon_products' do 
-    it 'assings @taxon and @wizard' do 
+    it 'assigns @taxon and @wizard' do 
       taxon = FactoryGirl.build(:taxon)
       Spree::Taxon.stub_chain(:includes, :find).and_return(taxon)
 
