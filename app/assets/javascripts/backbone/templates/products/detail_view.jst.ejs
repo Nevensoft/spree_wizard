@@ -1,8 +1,8 @@
 <div id="product-detail-header">
 	<h3>View and Add Your Selected Product:</h3>
 </div>
-<div id="product-detail-body">
 
+<div id="product-detail-body">
 	
 	<div class="left" id="product-detail-left-column">
 		<div id="product-photo">
@@ -11,20 +11,16 @@
 	</div>
 
 	<div class="right" id="product-detail-right-column">
-		<h1><%= name %></h1>
+		<h1 class="product-name"><%= name %></h1>
 
 		<div id="product-details-form">
 			<div id="upgrade-price">
-				<h3><strong>Upgrade Price:</strong> Add $<%= price%></h3>
+				<h3><strong>Price:</strong> $<span><%= price%></span></h3>
 			</div>
 
 			<div id="product-detail-option">
 				<h3>Option:</h3>
-				<select id="detail-option">
-					<option value="default">Choose variation</option>
-					<option value="red">Red</option>
-					<option value="blue">Blue</option>
-				</select>
+				<select id='detail-option'></select>
 			</div>
 
 			<button class="btn product-add">Add to Package</button>

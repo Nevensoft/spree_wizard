@@ -14,9 +14,7 @@ class SpreeWizard.Views.Steps.StepView extends Marionette.ItemView
   
     ##Keep track of selected taxons so that the "selected" class can be removed on the next selection
     window.previousElement.className = window.previousElement.className.replace(" selected", "") if (window.previousElement != undefined)
-    this.el.className += " selected";
-    window.previousElement = this.el;
-
-    console.log @model.attributes.id
+    @el.className += " selected";
+    window.previousElement = @el;
 
 

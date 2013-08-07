@@ -22,12 +22,17 @@
 object @taxon
 
 child :products do 
-  attributes :id, :name, :price, :description
+  attributes :id, :name, :price, :description, :sku, :taxon_ids
   
   node(:attachment_url) { |p| p.images.try(:first).try(:attachment).try(:url) } 
   node(:announcement )  { false }
-
+  
   child :variants do 
-    attributes :id, :price
+    attributes :id, :price, :is_master
+    
+    child :option_values do 
+      attributes :name
+    end
   end
+  
 end
