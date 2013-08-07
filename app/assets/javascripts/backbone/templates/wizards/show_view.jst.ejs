@@ -9,8 +9,11 @@
       <div class="subtotal">
         <h3>Subtotal: $yy.xx</h3>
       </div>
+      
       <div class="add-cart">
-        <button value="Add To Cart">Add To Cart</button>
+        <form action='/orders/populate' method='POST'>
+          <button type='submit' value="Add To Cart">Add To Cart</button>
+        </form>
       </div>
     </div>
   </div>
