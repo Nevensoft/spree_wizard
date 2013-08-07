@@ -1,5 +1,5 @@
 <div id="wizard-frame">
-  
+  <form action='/orders/populate' method='POST'>
   <div id="wizard-header">
     <div class="header-text">
       <h2><%= name %></h2>
@@ -7,21 +7,20 @@
     
     <div class="wizard-header-right">
       <div class="subtotal">
-        <h3>Subtotal: $yy.xx</h3>
+        <h3>Subtotal: $<span>0.00</span></h3>
       </div>
       
       <div class="add-cart">
-        <form action='/orders/populate' method='POST'>
+          <input type='hidden' name='authenticity_token' />
           <button type='submit' value="Add To Cart">Add To Cart</button>
-        </form>
       </div>
     </div>
   </div>
-  
   <div class="wizard-box">
     <div id="steps"></div>
     <div id="review-share-box"></div></div>
   </div>
+  </form>
 </div>
 
 

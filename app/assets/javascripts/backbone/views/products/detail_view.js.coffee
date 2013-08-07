@@ -5,18 +5,38 @@ class SpreeWizard.Views.Products.DetailView extends Marionette.ItemView
   
   el: '#product-detail-frame'
   el_select = '#detail-option'
+  el_src = '#product-photo > img'
+  el_name = '.product-name'
+  el_price = '#upgrade-price > h3 > span'
   
   select_this_product: (e) ->
-    id = $(el_select + "> option[selected='selected']").attr('value')
-    $('.add-cart > form').prepend("<input hidden name='variants[" + id + "]' value='1'/>")
-    
+    id = $(el_select).find(':selected').val()
+    src = $(el_src).attr('src')
+    name = $(el_name).text()
+    price = parseFloat($(el_price).text())
+    $('.taxon.selected > .selected-product-id').attr('name', 'variants[' + id + ']')
+    $('.taxon.selected > .selected-product').attr('price', price)
+    $('.taxon.selected > .selected-product > img').attr('src', src)
+    $('.taxon.selected > .taxon-description > p').html(name)
+    subtotal = 0
+
+    prices = $('.selected-product')
+    _.each(prices, (price) ->
+      subtotal += parseFloat($(price).attr('price'))
+    )
+
+    subtotal = subtotal.toFixed(2)
+    $('.subtotal > h3 > span').text(subtotal)
+    $('html, body').animate({
+            scrollTop: $('#wizard-frame').offset().top - 20 + 'px'
+        }, 'fast');
   
   create_variant_options: (variants) ->
     $(el_select).append("<option value='default'>Choose variation</option>")
     
     _.each(variants, (variant) ->
       names = []
-      _.each(variant.option_values, (ov)  -> names.push(ov.name) )
+      _.each(variant.option_values, (option_value)  -> names.push(option_value.name) )
       $(el_select).append("<option value='" + variant.id + "''>" + names.join(' - ') + "</option>")
     )
     
