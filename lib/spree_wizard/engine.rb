@@ -3,9 +3,13 @@ module SpreeWizard
     require 'spree'
     isolate_namespace Spree
     engine_name 'spree_wizard'
+    
+    # require these gems here so their js assets get loaded
+    require 'railsy_backbone'
+    require 'marionette-rails'
 
     config.autoload_paths += %W(#{config.root}/lib)
-    
+
     rake_tasks do 
       load 'spree_wizard/railties/sample_load.rake'
     end
