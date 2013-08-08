@@ -11,6 +11,9 @@ class SpreeWizard.Views.Products.DetailView extends Marionette.ItemView
   
   select_this_product: (e) ->
     id = $(el_select).find(':selected').val()
+    if(id == 'default')
+      alert('Please choose a product option')
+      return
     src = $(el_src).attr('src')
     name = $(el_name).text()
     price = parseFloat($(el_price).text())
@@ -54,7 +57,7 @@ class SpreeWizard.Views.Products.DetailView extends Marionette.ItemView
     _.find(variants, (variant) -> 
       if(variant.id == variant_id)
         # diff = parseInt(variant.price) -  parseInt( model.get('price') )    
-        $('#upgrade-price > h3').html("<strong>Price:</strong>  $" + variant.price)
+        $('#upgrade-price > h3').html("<strong>Price:</strong>  $<span>" + variant.price + "</span>")
     )
     
     
