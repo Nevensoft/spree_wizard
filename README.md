@@ -71,4 +71,4 @@ require 'spree_wizard/factories'
 
 
 ### Credits
-Copyright (c) 2013 Weston Platter, released under the MIT License.
+Copyright (c) 2013 Weston Platter and Dustin Platte, released under the MIT License.
