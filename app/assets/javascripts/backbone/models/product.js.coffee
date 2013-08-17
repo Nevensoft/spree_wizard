@@ -12,9 +12,10 @@ class SpreeWizard.Collections.ProductsCollection extends Backbone.Collection
 
     $.ajax url,
       type: 'GET'
+      format: 'json'
       success: (data, textStatus, jqXHR) =>
         @render_fetched_products(data.products)
-
+        
         # TODO need to come up with render logic when data.products.size = 0
 
   render_fetched_products: (products) ->
