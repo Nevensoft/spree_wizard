@@ -1,19 +1,14 @@
 module Spree
   module Admin
     class WizardsController < ResourceController
-
       # all CRUD behavior is inherited from Spree::ResourceController
-
-
-      # manual overrides
-
-        def update
-          if params[:wizard][:taxon_ids].present?
-            params[:wizard][:taxon_ids] = params[:wizard][:taxon_ids].split(',')
-          end
-          super
-        end
-
+      
+      def add_taxon
+        # variable used to separate multiple new wizard_taxons in HTML name attribute
+        # TODO -- totally open to doing this a better way
+        @time_stamp = Time.now.to_i.to_s
+      end
+      
     end
   end
 end
