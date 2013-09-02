@@ -19,7 +19,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'spree', '~> 2.0.0'
   s.add_dependency 'ejs'
   s.add_dependency 'rabl'
-  s.add_dependency 'railsy_backbone'
   s.add_dependency 'marionette-rails'
 
   s.add_development_dependency 'capybara', '~> 2.1'
