@@ -14,5 +14,5 @@ object @wizard
 attributes :id, :name
 
 child :taxons do 
-  attributes :id, :name, :permalink, :taxonomy_id
+  attributes :id, :name, :permalink, :taxonomy_id, :position
 end
