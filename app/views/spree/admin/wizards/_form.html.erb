@@ -10,13 +10,20 @@
     <%= f.text_field :permalink %>
   </div>
 
-  <div class="twelve columns alpha omega">
+  <div class="twelve columns alpha omega wizard-taxons">
     <div class="field">
-      <%= f.field_container :taxons do %>
-        <%= f.label :taxon_ids, Spree.t(:taxons) %><br />
-        <%= f.hidden_field :taxon_ids, :value => @wizard.taxon_ids.join(',') %>
+      <%= f.label :taxon_id, Spree.t(:taxons) %> - Postion<br />
+      <%= f.fields_for :wizard_taxons do |wf_form| %>
+        <div class='wizard-taxon'>
+          <%= wf_form.select :taxon_id, Spree::Taxon.order(:name).collect{|t|["#{t.name} - #{t.permalink}", t.id]}%>
+          <%= wf_form.text_field :position %>
+          <%= wf_form.check_box '_destroy' %>
+          <%= wf_form.label :delete %>
+        </div>
+        <br />
       <% end %>
     </div>
+    <%= link_to 'Add Taxon', '#', id: 'add-taxon' %>
   </div>
   
   <div class="clear"></div>
