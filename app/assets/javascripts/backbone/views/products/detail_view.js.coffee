@@ -20,7 +20,7 @@ class SpreeWizard.Views.Products.DetailView extends Marionette.ItemView
     $('.taxon.selected > .selected-product-id').attr('name', 'variants[' + id + ']')
     $('.taxon.selected > .selected-product').attr('price', price)
     $('.taxon.selected > .selected-product > img').attr('src', src)
-    $('.taxon.selected > .taxon-description > p').html(name)
+    $('.taxon.selected > .taxon-info > .taxon-description > p').html(name)
     subtotal = 0
 
     prices = $('.selected-product')

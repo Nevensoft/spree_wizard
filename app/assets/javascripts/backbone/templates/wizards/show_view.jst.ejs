@@ -4,16 +4,15 @@
     <div class="header-text">
       <h2><%= name %></h2>
     </div>
+  </div>
+  <div class="wizard-header-right">
+    <div class="subtotal">
+      <h3>Subtotal: $<span>0.00</span></h3>
+    </div>
     
-    <div class="wizard-header-right">
-      <div class="subtotal">
-        <h3>Subtotal: $<span>0.00</span></h3>
-      </div>
-      
-      <div class="add-cart">
-          <input type='hidden' name='authenticity_token' />
-          <button type='submit' value="Add To Cart">Add To Cart</button>
-      </div>
+    <div class="add-cart">
+        <input type='hidden' name='authenticity_token' />
+        <button type='submit' value="Add To Cart">Add To Cart</button>
     </div>
   </div>
   <div class="wizard-box">
@@ -22,13 +21,12 @@
   </div>
   </form>
 </div>
-
-
 <div id="product-selection">
 
   <div id="product-container">
     <div id="product-list"></div>
   </div>
 </div>
-
 <div id="product-detail-frame"></div>
+<div class="clear">
+  </div>
