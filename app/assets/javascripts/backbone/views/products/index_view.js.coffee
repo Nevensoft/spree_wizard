@@ -25,16 +25,13 @@ class SpreeWizard.Views.Products.IndexView extends Marionette.CompositeView
     product_list_previous_shift = $('#product-list-container').scrollLeft()
     product_list_shift_amount = 528
     $('#product-list-container').animate({scrollLeft: product_list_previous_shift - product_list_shift_amount}, 600, 'swing')
-    console.log(product_list_previous_shift - product_list_shift_amount)
   shift_products_right: ->
     product_list_previous_shift = $('#product-list-container').scrollLeft()  
     product_list_shift_amount = 528
     $('#product-list-container').animate({scrollLeft: product_list_previous_shift + product_list_shift_amount}, 600, 'swing')
-    console.log(product_list_previous_shift - product_list_shift_amount)
   check_moved_products: ->
     product_list_previous_shift = $('#product-list-container').scrollLeft()
     total_width_left = parseInt($('#product-list').css('width').replace("px", "")) - 528 - product_list_previous_shift
-    console.log(total_width_left)
     if(total_width_left <= 0)
       $('#product-arrow-right span').css('background-position', '-174px -232px')
     else
