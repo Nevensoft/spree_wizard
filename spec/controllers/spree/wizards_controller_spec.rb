@@ -25,8 +25,23 @@ describe Spree::WizardsController do
       assigns(:wizard).should eq(@wizard)
     end
 
-    it 'renders rabl template' do 
+    it 'renders rabl template via id lookup' do 
       xhr :get, :show, id: @wizard.to_param,
+        use_route: 'spree', format: 'json'
+      response.should be_successful
+      response.should render_template('spree/wizards/show_api')
+    end
+  end
+  
+  describe 'GET #show_bundle' do 
+    it 'looks up @wizard by permalink' do
+      get :bundle_show, use_route: :spree, permalink: @wizard.permalink
+      assigns(:wizard).should eq(@wizard)
+      response.should render_template('spree/wizards/show', format: :html)
+    end
+
+    it 'renders rabl template via permalink lookup' do 
+      xhr :get, :bundle_show, permalink: @wizard.permalink,
         use_route: 'spree', format: 'json'
       response.should be_successful
       response.should render_template('spree/wizards/show_api')
