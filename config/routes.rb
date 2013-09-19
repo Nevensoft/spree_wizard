@@ -15,5 +15,5 @@ Spree::Core::Engine.routes.draw do
       get 'taxon/:taxon_id/products' => 'wizards#taxon_products'
     end
   end
-  
+  get 'bundles/:permalink' => 'wizards#bundle_show'
 end

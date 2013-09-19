@@ -26,6 +26,20 @@ module Spree
         format.json { render 'spree/wizards/show_api', object: @wizard }
       end
     end
+    
+    # Same as :show action, but look by permalink
+    # 
+    # GET /wizards/1
+    # GET /wizards/1.json
+    # 
+    def bundle_show
+      @wizard = Spree::Wizard.find_by_permalink(params[:permalink])
+      
+      respond_to do |format|
+        format.html { render 'spree/wizards/show' } 
+        format.json { render 'spree/wizards/show_api', object: @wizard }
+      end
+    end
 
     # Send back all products and associated variants for a taxon. 
     # Reponse is JSON response for all request types. 
