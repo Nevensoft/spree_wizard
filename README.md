@@ -1,7 +1,7 @@
 SpreeWizard
 ============
 
-[![Build Status](https://travis-ci.org/westonplatter/spree_wizard.png?branch=master)](https://travis-ci.org/westonplatter/spree_wizard)
+[![Build Status](https://travis-ci.org/think602/spree_wizard.png?branch=master)](https://travis-ci.org/think602/spree_wizard)
 
 ### Javacript and Backbone Methodologies
 
