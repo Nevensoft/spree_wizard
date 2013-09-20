@@ -1,0 +1,14 @@
+
+$ ->  
+   
+  # get attributes from DOM and instantiate Backbone model 
+  wizard_id = $('#wizard').data('wizard-id')
+  wizard_preload_variant_ids = $('#wizard').data('wizard-preload-variant-ids')
+  wizard = new SpreeWizard.Models.Wizard({id: wizard_id, preloadVariantIds: ''});
+    
+  # make API call to get all model attributes
+  wizard.fetch success: (model, response, options) ->
+  
+    # create and render Marionette ItemView
+    wizard_show_view = new SpreeWizard.Views.Wizards.ShowView(model: model)
+    wizard_show_view.render()
