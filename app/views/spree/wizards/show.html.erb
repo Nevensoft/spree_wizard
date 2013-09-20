@@ -4,24 +4,16 @@
     // initialize model with id
     var wizard = new SpreeWizard.Models.Wizard({id: <%= @wizard.id %>});
     
-    
-    
     // pull down nested data structure from controller
     wizard.fetch({
       success: function(wizard_model, response, options){
         
-        // create a view instance
-        // renders by default on initialize callback
+        // create and render Marionette ItemView
         var wizard_show_view = new SpreeWizard.Views.Wizards.ShowView({model:wizard_model});
-        
         wizard_show_view.render();
       }
     });
   });
 </script>
 
-
-<% # Backbone models/views/templates take care of the rest %>
-<% # see /app/javascripts/backbone/**/*.* for more info %>
-
-<div id="wizard"></div>
+<div id="wizard" ></div>
