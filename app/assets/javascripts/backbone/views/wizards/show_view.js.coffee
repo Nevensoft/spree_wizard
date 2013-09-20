@@ -9,9 +9,13 @@ class SpreeWizard.Views.Wizards.ShowView extends Marionette.ItemView
     wizard_info = new SpreeWizard.Views.ReivewBoxes.ShowView()
     wizard_info.render()
     @set_authenticity_token()
+    @render_first_option()
 
   set_authenticity_token: ->
-  	token = $('meta[name="csrf-token"]').attr('content')
-  	$("input[name='authenticity_token']").val(token)
+    token = $('meta[name="csrf-token"]').attr('content')
+    $("input[name='authenticity_token']").val(token)
+    
+  render_first_option: ->
+    # TODO 'should automatically open the first selection group'
 
     
