@@ -13,6 +13,10 @@ object @wizard
 
 attributes :id, :name
 
-child :taxons do 
-  attributes :id, :name, :permalink, :taxonomy_id, :position
+child :wizard_taxons do 
+  attributes :id, :position, :variant_id
+    
+  child :taxon do 
+    attributes :id, :name, :permalink, :taxonomy_id, :position
+  end
 end
