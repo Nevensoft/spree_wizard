@@ -3,7 +3,6 @@ module Spree
 
     # GET /wizards
     # GET /wizards.json
-    # 
     def index
       @wizards = Spree::Wizard.all
 
@@ -14,10 +13,8 @@ module Spree
     end
 
     # Eager load the wizard's taxons
-    # 
     # GET /wizards/1
     # GET /wizards/1.json
-    # 
     def show
       @wizard = Spree::Wizard.find(params[:id])
 
@@ -27,11 +24,9 @@ module Spree
       end
     end
     
-    # Same as :show action, but look by permalink
-    # 
+    # Same as :show action, but lookup by permalink
     # GET /wizards/1
     # GET /wizards/1.json
-    # 
     def bundle_show
       @wizard = Spree::Wizard.find_by_permalink(params[:permalink])
       
@@ -41,12 +36,8 @@ module Spree
       end
     end
 
-    # Send back all products and associated variants for a taxon. 
-    # Reponse is JSON response for all request types. 
-    # Associations are eager loaded.
-    #
-    # GET /wizards/taxon/1/products
-    # 
+    # Get taxon and eager load associated objects
+    # GET /wizards/taxon/1/products.json
     def taxon_products
       @taxon = Spree::Taxon.find(params[:taxon_id])
       # Completed 200 OK in 34ms (Views: 26.5ms | ActiveRecord: 1.1ms)
