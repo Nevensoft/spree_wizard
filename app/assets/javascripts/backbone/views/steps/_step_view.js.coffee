@@ -10,11 +10,9 @@ class SpreeWizard.Views.Steps.StepView extends Marionette.ItemView
     
   fetch_products: ->
     c = new SpreeWizard.Collections.ProductsCollection()
-    c.set_taxon_products(@model.get('id'))
+    c.set_taxon_products(@model.attributes.taxon.id)
   
     ##Keep track of selected taxons so that the "selected" class can be removed on the next selection
     window.previousElement.className = window.previousElement.className.replace(" selected", "") if (window.previousElement != undefined)
     @el.className += " selected";
     window.previousElement = @el;
-
-

@@ -1,5 +1,5 @@
 class SpreeWizard.Models.Taxon extends Backbone.Model 
-  # paramRoot: 'taxon' # paramRoot not working as rails-backbone described
+  paramRoot: 'taxon'
   # no url. spree doesn't nicely expose a single taxon.
     
 

@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'ejs'
   s.add_dependency 'rabl'
   s.add_dependency 'marionette-rails'
-  s.add_dependency 'railsy_backbone', '0.0.2'
+  s.add_dependency 'railsy_backbone', '0.0.3'
 
   s.add_development_dependency 'capybara', '~> 2.1'
   s.add_development_dependency 'coffee-rails'
@@ -33,4 +33,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'simplecov'
   s.add_development_dependency 'sqlite3'
   s.add_development_dependency 'shoulda'
+  s.add_development_dependency 'bullet'
+  s.add_development_dependency 'ruby-growl'
 end

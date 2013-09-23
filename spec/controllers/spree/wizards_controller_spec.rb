@@ -51,7 +51,7 @@ describe Spree::WizardsController do
   describe 'GET #taxon_products' do 
     it 'assigns @taxon and @wizard' do 
       taxon = FactoryGirl.build(:taxon)
-      Spree::Taxon.stub(:find).and_return(taxon)
+      Spree::Taxon.stub_chain(:includes, :includes, :find).and_return(taxon)
 
       xhr :get, :taxon_products, taxon_id: 1, 
         use_route: 'spree', format: 'json'
@@ -61,7 +61,7 @@ describe Spree::WizardsController do
     end
 
     it 'renders rabl template' do 
-      Spree::Taxon.stub_chain(:includes, :find).and_return('spree_taxon')
+      Spree::Taxon.stub_chain(:includes, :includes,:find).and_return('spree_taxon')
 
       xhr :get, :taxon_products, taxon_id: 1, 
         use_route: 'spree', format: 'json'

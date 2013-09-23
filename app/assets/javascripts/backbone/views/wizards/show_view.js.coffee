@@ -5,17 +5,17 @@ class SpreeWizard.Views.Wizards.ShowView extends Marionette.ItemView
   el: '#wizard'
   
   onRender: ->
-    @model.initializeSteps()
+    @renderReviewBoxes()
+    @getAndRenderSteps()
+    @setAuthenticityToken()
+  
+  renderReviewBoxes: ->
     wizard_info = new SpreeWizard.Views.ReivewBoxes.ShowView()
     wizard_info.render()
-    @set_authenticity_token()
-    @render_first_option()
-
-  set_authenticity_token: ->
+  
+  getAndRenderSteps: ->
+    @model.initializeSteps()
+    
+  setAuthenticityToken: ->
     token = $('meta[name="csrf-token"]').attr('content')
-    $("input[name='authenticity_token']").val(token)
-    
-  render_first_option: ->
-    # TODO 'should automatically open the first selection group'
-
-    
+    $("input[name='authenticity_token']").val(token)  

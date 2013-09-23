@@ -1,5 +1,5 @@
 class SpreeWizard.Models.Product extends Backbone.Model
-  # paramRoot: 'product' # paramRoot does work as rails-backbone described
+  paramRoot: 'product'
   urlRoot: '/api/products'
 
 class SpreeWizard.Collections.ProductsCollection extends Backbone.Collection

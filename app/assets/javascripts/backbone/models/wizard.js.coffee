@@ -19,11 +19,11 @@
 
 
 class SpreeWizard.Models.Wizard extends Backbone.Model
-  # paramRoot: 'wizard' # paramRoot not working as rails-backbone described 
+  paramRoot: 'wizard'
   urlRoot: '/wizards'
 
   initializeSteps: ->
-    steps = new SpreeWizard.Collections.StepCollections(@attributes.taxons)
+    steps = new SpreeWizard.Collections.StepCollections(@attributes.wizard_taxons)
     view = new SpreeWizard.Views.Steps.IndexView(collection: steps)
     view.render()
     
