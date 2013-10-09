@@ -6,7 +6,7 @@ $('.wizard-taxons .field').append "\
   <div class='wizard-taxon-new wizard-taxon'>\
     <%= j select_tag(@base + '[taxon_id]', options_for_select(Spree::Taxon.order(:name).collect {|t|[t.name + ' -  ' + t.permalink, t.id]}) )%>\
     <%= j text_field_tag(@base + '[position]',   nil, class: 'tf-short') %>\
-    <%= j text_field_tag(@base + '[sku]', nil, class: 'tf-short') %>\
+    <%= j text_field_tag(@base + '[sku]', nil, class: 'tf-medium') %>\
   </div>\
   <br/>"
   
