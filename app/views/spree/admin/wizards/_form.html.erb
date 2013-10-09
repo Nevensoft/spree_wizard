@@ -17,7 +17,7 @@
         <div class='wizard-taxon'>
           <%= wf_form.select :taxon_id, Spree::Taxon.order(:name).collect{|t|["#{t.name} - #{t.permalink}", t.id]}%>
           <%= wf_form.text_field :position, class: 'tf-short' %>
-          <%= wf_form.text_field :variant_id, class: 'tf-short' %>
+          <%= wf_form.text_field :sku, class: 'tf-short' %>
           <%= wf_form.check_box '_destroy' %>
           <%= wf_form.label :delete %>
         </div>
