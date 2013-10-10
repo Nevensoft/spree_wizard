@@ -8,20 +8,15 @@ class SpreeWizard.Views.Steps.IndexView extends Marionette.CompositeView
   onRender: ->  
     _.each(@collection.models, ((model_step, index, list) ->
       url_param_key = "step" + (index+1).toString()
-      variant_id = @getURLParameter(url_param_key)
-      @getVariant(variant_id, model_step) if variant_id
+      sku = @getURLParameter(url_param_key)
+      @getVariant(sku, model_step) if sku
     ), @)
     
   getURLParameter: (name) -> 
     decodeURIComponent((new RegExp("[?|&]#{name}=([^&;]+?)(&|##|;|$)").exec(location.search) || [null,""] )[1].replace(/\+/g, '%20'))||null;
       
-  getVariant: (variant_id, model_step) ->
-    
-    # NOTE: Intentionally chose variant_id as the search param 
-    #       Using the Spree based SKU number only specifies scope to the Master 
-    #       Variant and client requirement was ability to level variant pre-selection
-    
-    $.ajax("/api/variants?q[id_eq]=" + variant_id, 
+  getVariant: (sku, model_step) ->
+    $.ajax("/api/variants?q[sku_eq]=" + sku, 
       dataType: 'json'
       context: @
       success: (data, textStatus, jqXHR) ->
