@@ -12,7 +12,10 @@
 
   <div class="twelve columns alpha omega wizard-taxons">
     <div class="field">
-      <%= f.label :taxon_id, Spree.t(:taxons) %> - Postion<br />
+      <%= f.label :taxon_id, Spree.t(:taxon) %>
+      - <%= f.label "Position" %> 
+      - <%= f.label "Pre-Selected Variant SKU" %>
+      <br />
       <%= f.fields_for :wizard_taxons do |wf_form| %>
         <div class='wizard-taxon'>
           <%= wf_form.select :taxon_id, Spree::Taxon.order(:name).collect{|t|["#{t.name} - #{t.permalink}", t.id]}%>
