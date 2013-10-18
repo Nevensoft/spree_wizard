@@ -2,28 +2,29 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_wizard'
-  s.version     = '2.0.0'
+  s.version     = '2.1.0'
   s.summary     = 'Spree multi product selelction wizard forms'
   s.description = 'Spree multi product selelction wizard forms'
-  s.required_ruby_version = '>= 1.9.3'
-
-  s.author    = 'weston platter'
-  s.email     = 'westonplatter@gmail.com'
-  s.homepage  = 'http://westonplatter.com'
+  s.author      = ['weston platter','dustin platte']
+  s.email       = ['weston@think602.com', 'dustin@think602.com']
+  s.homepage    = 'http://github.com/think602/spree_wizard'
+  s.license     = 'BSD-3'
 
   s.files        = `git ls-files`.split("\n")
   s.test_files   = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_api', '~> 2.0.0'
-  s.add_dependency 'spree_backend', '~> 2.0.0'
-  s.add_dependency 'spree_core', '~> 2.0.0'
-  s.add_dependency 'spree_frontend', '~> 2.0.0'
+  s.required_ruby_version = '>= 2.0.0'
+
+  s.add_dependency 'spree_api', '~> 2.1.0'
+  s.add_dependency 'spree_backend', '~> 2.1.0'
+  s.add_dependency 'spree_core', '~> 2.1.0'
+  s.add_dependency 'spree_frontend', '~> 2.1.0'
   s.add_dependency 'ejs'
   s.add_dependency 'rabl'
   s.add_dependency 'marionette-rails'
-  s.add_dependency 'railsy_backbone', '0.0.3'
+  s.add_dependency 'railsy_backbone', '0.0.4'
 
   s.add_development_dependency 'capybara', '~> 2.1'
   s.add_development_dependency 'coffee-rails'

@@ -5,11 +5,11 @@ module Spree
     class WizardsController < ResourceController
       # all CRUD behavior is inherited from Spree::ResourceController
       
-      # copied from spree 2-0-stable
-      # https://github.com/spree/spree/blob/b691ddfe5c41a21a308c2cb0472c046c35ba9b8f/backend/app/controllers/spree/admin/resource_controller.rb#L26
+      # copied from spree 2-1-stable
+      # https://github.com/spree/spree/blob/334a011d2b8e16355e4ae77ae07cd93f7cbc8fd1/backend/app/controllers/spree/admin/resource_controller.rb
       def update
         invoke_callbacks(:update, :before)
-        if @object.update_attributes(params[object_name])
+        if @object.update_attributes(permitted_resource_params)
           invoke_callbacks(:update, :after)
           flash[:success] = flash_message_for(@object, :successfully_updated)
           respond_with(@object) do |format|

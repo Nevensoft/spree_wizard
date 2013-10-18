@@ -3,14 +3,22 @@ SpreeWizard
 
 [![Build Status](https://travis-ci.org/think602/spree_wizard.png?branch=master)](https://travis-ci.org/think602/spree_wizard)
 
-### Javacript and Backbone Methodologies
+__We're Spree 2.0 and 2.1 compatible! :)__
 
-<br />
-<br />
+SpreeWizard is a Spree >= 2.0 extension that enables contextualized eCommerce.
 
-### Standard Spree Exention Stuff
+The extension enables the Spree::Admin to group and suggest products/variants, 
+and customers view and select said products in the "Wizard" objects's defined 
+context.
+
+<!-- TODO better explain this -->
+
+<!-- TODO put link to demo site -->
+
+<!-- TODO create simple video -->
+
+### Standard Spree Exention Info
 <hr />
-
 
 ### Installation
 
