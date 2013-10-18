@@ -7,15 +7,16 @@ describe Spree::WizardsController do
   end
 
   describe 'GET #index' do
-    it 'assigns all wizards as @wizards' do
+    it 'HTML assigns all wizards as @wizards' do
       get :index, use_route: :spree
       assigns(:wizards).should eq([@wizard])
     end
 
-    it 'returns json list' do 
-      xhr :get, :index, 
-        use_route: 'spree', format: 'json'
-      response.body.should == [@wizard].to_json
+    it 'JSON returns json list' do 
+      xhr :get, :index, use_route: 'spree', format: 'json'
+      json = JSON.parse(response.body)
+      json.count.should == [@wizard].count
+      json.first["id"].should == [@wizard].first.id
     end
   end
 
@@ -34,13 +35,14 @@ describe Spree::WizardsController do
   end
   
   describe 'GET #show_bundle' do 
-    it 'looks up @wizard by permalink' do
-      get :bundle_show, use_route: :spree, permalink: @wizard.permalink
+    it 'HTML looks up @wizard by permalink' do
+      get :bundle_show, permalink: @wizard.permalink, 
+        use_route: :spree, format: 'html'
       assigns(:wizard).should eq(@wizard)
-      response.should render_template('spree/wizards/show', format: :html)
+      response.should render_template('spree/wizards/show')
     end
 
-    it 'renders rabl template via permalink lookup' do 
+    it 'JSON renders rabl template via permalink lookup' do 
       xhr :get, :bundle_show, permalink: @wizard.permalink,
         use_route: 'spree', format: 'json'
       response.should be_successful
