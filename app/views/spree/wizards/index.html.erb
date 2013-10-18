@@ -8,30 +8,15 @@
     <th></th>
   </tr>
 
-<% @wizards.each do |wizard| %>
-  <tr>
-    <td><%= wizard.name %></td>
-    <td><%= link_to 'Show', wizard %></td>
-  </tr>
-
-  
-<% end %>
+  <% @wizards.each do |wizard| %>
+    <tr>
+      <td><%= wizard.name %></td>
+      <td><%= link_to 'Show', wizard %></td>
+      <td><%= link_to 'Pre-Selectd Path', wizard_preselected_variants_path(wizard) %></td>
+      <td><%= link_to 'Pre-Selectd Url', wizard_preselected_variants_url(wizard) %></td>
+    </tr>  
+  <% end %>
 </table>
-
-<div id="wizards">
-  	<div class="wizard">
-  		<p>Wizard 1</p>
-  	</div>
-  	<div class="wizard">
-  		<p>Wizard 2</p>
-  	</div>
-  	<div class="wizard">
-  		<p>Wizard 3</p>
-  	</div>
-  	<div class="wizard">
-  		<p>Wizard 4</p>
-  	</div>
-  </div>
 
 <br />
 
