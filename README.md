@@ -13,7 +13,7 @@ context.
 
 <!-- TODO better explain this -->
 
-<!-- TODO put link to demo site -->
+Live demo, [demo-spree-wizard.herokuapp.com/wizards/1](https://demo-spree-wizard.herokuapp.com/wizards/1).
 
 <!-- TODO create simple video -->
 
