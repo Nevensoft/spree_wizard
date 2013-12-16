@@ -9,8 +9,12 @@ class SpreeWizard.Views.Products.IndexView extends Marionette.CompositeView
   itemViewContainer: '#product-list'
   
   onRender: () ->
+    @setTaxonName()
+    
     product_list_width = @collection.length * 176
     $('#product-list').css('width', product_list_width + 'px')
+    
+    # TODO all this should go in event listeners
     if(@collection.length > 3)
       $('#product-arrow-left').on 'click', () =>
         @shift_products_left()
@@ -40,3 +44,6 @@ class SpreeWizard.Views.Products.IndexView extends Marionette.CompositeView
       $('#product-arrow-left span').css('background-position', '-120px -232px')
     else
       $('#product-arrow-left span').css('background-position', '-6px -232px')
+
+  setTaxonName: () ->
+    $('#taxon-name').html(@collection.taxon.name)
