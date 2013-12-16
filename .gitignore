@@ -15,3 +15,5 @@ spec/dummy
 
 # custom added
 spree.yml
+.ruby-version
+.ruby-gemset
