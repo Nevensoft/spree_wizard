@@ -20,6 +20,8 @@
 
 /************* Wizard Styling *********************/
 
+
+
 #wizard-frame  {
 	width:300px;
 	margin-bottom:20px;
@@ -68,29 +70,21 @@
 }
 
 .taxon {	
-	height:100px;
+	height:120px;
 	margin:0 auto;
 	padding:15px 0 10px 0;
 	color:white;
 	overflow:hidden;
-	border-bottom:1px solid white;
+	border-bottom:1px solid gray;
+	border-left:1px solid gray;
+	border-right:1px solid gray;
 
-	h5 {
-		display:block;
-		background-color:#1b2f4e;
-		background-image:linear-gradient(to top,rgba(0,0,0,0) 0,rgba(0,0,0,0) 50%,rgba(55,155,255,0.1) 50%,rgba(55,155,255,0.3) 100%);
-		width:128px;
-		height:35px;
-		margin:10px;
-		color:white;
-		border-radius:10px;
-		line-height:34px;
-		text-align:left;
-		text-transform:uppercase;
+	h6 {
+		float:left;
 	}
 
-	span {
-		margin:10px;
+	img {
+		float:right
 	}
 
 	.selected-product {
@@ -284,11 +278,18 @@
 }
 
 #product-list {
-	margin-left:45px;
-	padding-right:31px;
-	position:relative;
-	left:0;
+	border-top:1px solid black;
+	border-bottom:1px solid black;
+	text-align:center;
+	h3 {
+		text-align:center;
+	}
 }
+
+#taxon-list {
+	border-top:1px solid black;
+}
+
 
 #selection-header {
 	border-radius:10px 10px 0 0;
@@ -312,17 +313,6 @@
 	margin-right:10px;
 }
 
-.product {
-	background:#8d8d8d;
-	border:1px solid #adaeb1;
-	border-radius:5px;
-	width:152px;
-	position:relative;
-	padding:3px;
-	margin:8px;
-	text-align:center;
-	float:left;
-}
 
 .product-box {
 	background:#ffffff;
